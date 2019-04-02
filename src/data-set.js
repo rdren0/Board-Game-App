@@ -208,7 +208,83 @@ const localGameParlours = [
     "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo"
     "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
-  }
+  },
+  {
+    "name": "Colorado Cider Company",
+    "address": "12650 W 2nd Ave #10, Denver, CO 80219",
+    "website": "https://coloradocider.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": null,
+    "weekdayClose": null,
+    "weekendOpen": 1600,
+    "weekendClose": 2000,
+    "googleMapsLink": "https://goo.gl/maps/9QiNVJhctSD2",
+    "bringYourOwnGame": true,
+    "gamesOffered": [17, 23, 24, 50]
+  },
+  {
+    "name": "Colorado Cider Company",
+    "address": "12650 W 2nd Ave #10, Denver, CO 80219",
+    "website": "https://coloradocider.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": null,
+    "weekdayClose": null,
+    "weekendOpen": 1600,
+    "weekendClose": 2000,
+    "googleMapsLink": "https://goo.gl/maps/9QiNVJhctSD2",
+    "bringYourOwnGame": true,
+    "gamesOffered": [17, 23, 24, 50]
+  },
+   {
+    "name": "Red Poppy Tea & Hookah Parlour",
+    "address": "2120 W 29th Ave, Denver, CO 80211",
+    "website": "http://www.redpoppyhookah.com/",
+    "hasFood": false,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1800,
+    "weekdayClose": 1800,
+    "weekendOpen": 2400,
+    "weekendClose": 2400,
+    "googleMapsLink": "https://goo.gl/maps/dNsRkfWwVuo",
+    "bringYourOwnGame": true,
+    "gamesOffered": [33, 34, 47, 51]
+  },
+  {
+    "name": "Global Goods & Coffee Shop",
+    "address": "5613 Olde Wadsworth Blvd, Arvada, CO 80002",
+    "website": "hhttps://www.globalgoodsandcoffee.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 0630,
+    "weekdayClose": 1700,
+    "weekendOpen": 0630,
+    "weekendClose": 1700,
+    "googleMapsLink": "https://goo.gl/maps/xGrbnNS1xQA2",
+    "bringYourOwnGame": true,
+    "gamesOffered": [7, 26, 30, 33, 39, 43]
+  },
+   {
+    "name": "Talnua Distillery & Tasting Room",
+    "address": "5405 W 56th Ave Unit C, Arvada, CO 80002",
+    "website": "https://www.talnua.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": null,
+    "weekdayClose": null,
+    "weekendOpen": 1600,
+    "weekendClose": 2200,
+    "googleMapsLink": "https://goo.gl/maps/fFHNvu6FcaA2",
+    "bringYourOwnGame": true,
+    "gamesOffered": [2, 3, 25, 26, 50]
+  },
+
 ]
 
 const boardGames = [
