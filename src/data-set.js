@@ -157,9 +157,11 @@ const boardGames = [
     "players": "2-7",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "city building",
-      "manage resources"],
+    "type": "strategy",
+    "features": [
+      "card drafting",
+      "hand management"
+    ],
     "gameId": 1
   },
   {
@@ -167,9 +169,10 @@ const boardGames = [
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "city building",
-      "manage resources"
+    "type": "strategy",
+    "features": [
+      "economic",
+      "worker placement"
     ],
     "gameId": 2
   },
@@ -178,10 +181,11 @@ const boardGames = [
     "players": "4-7",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "bluff / deceive",
-      "social",
-      "laugh out loud"
+    "type": "party",
+    "features": [
+      "bluffing",
+      "card game",
+      "hand management"
     ],
     "gameId": 3
   },
@@ -190,11 +194,12 @@ const boardGames = [
     "players": "3-6",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "cooperative",
-      "bluff / deceive",
-      "exploration",
-      "survive"
+    "type": "thematic",
+    "features": [
+      "adventure",
+      "hidden traitor",
+      "dice rolling",
+      "cooperative"
     ],
     "gameId": 4
   },
@@ -203,8 +208,10 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 20,
-    "type": [
-      "survive"
+    "type": "strategy",
+    "features": [
+      "auction",
+      "family"
     ],
     "gameId": 5
   },
@@ -213,20 +220,23 @@ const boardGames = [
     "players": "2-8",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "laugh out loud",
-      "family"
+    "type": "party",
+    "features": [
+      "dice rolling",
+      "family",
+      "wagering"
     ],
     "gameId": 6
   },
   {
-    "name": "Carcassone",
+    "name": "Carcassonne",
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "think critically",
-      "territory control"
+    "type": "strategy",
+    "features": [
+      "city building",
+      "family"
     ],
     "gameId": 7
   },
@@ -235,10 +245,11 @@ const boardGames = [
     "players": "3-6",
     "weight": "medium",
     "timeToPlay": 100,
-    "type": [
-      "trade",
-      "risk take",
-      "manage resources"
+    "type": "strategy",
+    "features": [
+      "trading",
+      "dice rolling",
+      "family"
     ],
     "gameId": 8
   },
@@ -247,10 +258,11 @@ const boardGames = [
     "players": "2-8",
     "weight": "light",
     "timeToPlay": 15,
-    "type": [
-      "social",
-      "guessing",
-      "think critically"
+    "type": "party",
+    "features": [
+      "card game",
+      "deduction",
+      "memory"
     ],
     "gameId": 9
   },
@@ -259,9 +271,11 @@ const boardGames = [
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 15,
-    "type": [
-      "bluff / deceive",
-      "negotiate"
+    "type": "party",
+    "features": [
+      "bluffing",
+      "card game",
+      "memory"
     ],
     "gameId": 10
   },
@@ -270,10 +284,11 @@ const boardGames = [
     "players": "3-7",
     "weight": "medium",
     "timeToPlay": 75,
-    "type": [
-      "bluff / deceive",
-      "negotiate",
-      "persuasion"
+    "type": "thematic",
+    "features": [
+      "bluffing",
+      "dice rolling",
+      "hidden traitor"
     ],
     "gameId": 11
   },
@@ -282,9 +297,11 @@ const boardGames = [
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "economic",
-      "science fiction"
+    "type": "strategy",
+    "features": [
+      "worker placement",
+      "science fiction",
+      "dice rolling"
     ],
     "gameId": 12
   },
@@ -293,8 +310,8 @@ const boardGames = [
     "players": "2-6",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "children's",
+    "features": [
       "adventure",
       "card game",
       "memory"
@@ -306,9 +323,10 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 80,
-    "type": [
-      "strategy",
-      "mythology"
+    "type": "strategy",
+    "features": [
+      "area control",
+      "auction"
     ],
     "gameId": 14
   },
@@ -317,10 +335,11 @@ const boardGames = [
     "players": "1-4",
     "weight": "light",
     "timeToPlay": 120,
-    "type": [
+    "type": "family",
+    "features": [
       "cooperative",
-      "family",
-      "science fiction"
+      "adventure",
+      "modular board"
     ],
     "gameId": 15
   },
@@ -329,10 +348,10 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 150,
-    "type": [
-      "strategy",
-      "american west",
-      "animals"
+    "type": "strategy",
+    "features": [
+      "set collection",
+      "deck building"
     ],
     "gameId": 16
   },
@@ -341,10 +360,10 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 60,
-    "type": [
-      "thematic",
-      "science fiction",
-      "transportation"
+    "type": "thematic",
+    "features": [
+      "dice rolling",
+      "tile placement"
     ],
     "gameId": 17
   },
@@ -353,10 +372,11 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 90,
-    "type": [
+    "type": "strategy",
+    "features": [
       "cooperative",
-      "zombies",
-      "animals"
+      "hand management",
+      "area movement"
     ],
     "gameId": 18
   },
@@ -365,9 +385,10 @@ const boardGames = [
     "players": "2",
     "weight": "medium",
     "timeToPlay": 20,
-    "type": [
-      "strategy",
-      "abstract"
+    "type": "abstract",
+    "features": [
+      "grid movement",
+      "tile placement"
     ],
     "gameId": 19
   },
@@ -376,9 +397,10 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
-      "economic",
+    "type": "strategy",
+    "features": [
+      "modular board",
+      "grid movement",
       "pick-up and deliver"
     ],
     "gameId": 20
@@ -388,10 +410,10 @@ const boardGames = [
     "players": "2",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
-      "animals",
-      "card game"
+    "type": "family",
+    "features": [
+      "card drafting",
+      "set collection"
     ],
     "gameId": 21
   },
@@ -400,8 +422,9 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "tile placement",
       "hand management"
     ],
     "gameId": 22
@@ -411,8 +434,9 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "set collection",
       "card drafting",
       "worker placement"
     ],
@@ -423,8 +447,8 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "card drafting",
       "dice rolling"
     ],
@@ -435,9 +459,9 @@ const boardGames = [
     "players": "4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "children's",
-      "roll / spin"
+    "type": "children's",
+    "features": [
+      "roll / spin and move"
     ],
     "gameId": 25
   },
@@ -446,9 +470,10 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
-      "tile placing",
+    "type": "family",
+    "features": [
+      "area control",
+      "tile placement",
       "card drafting"
     ],
     "gameId": 26
@@ -458,8 +483,8 @@ const boardGames = [
     "players": "3-5",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "hand management",
       "pick-up and deliver"
     ],
@@ -470,10 +495,9 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
+    "type": "strategy",
+    "features": [
       "cooperative",
-      "strategy",
-      "deck building",
       "card drafting"
     ],
     "gameId": 28
@@ -483,8 +507,9 @@ const boardGames = [
     "players": "2",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "abstract",
+    "type": "family",
+    "features": [
+      "card drafting",
       "tile placement"
     ],
     "gameId": 29
@@ -494,8 +519,8 @@ const boardGames = [
     "players": "2-6",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "hand management"
     ],
     "gameId": 30
@@ -505,8 +530,8 @@ const boardGames = [
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 115,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "area control",
       "grid movement"
     ],
@@ -517,8 +542,9 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "card game",
       "hand management"
     ],
     "gameId": 32
@@ -528,8 +554,8 @@ const boardGames = [
     "players": "1-4",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "abstract",
+    "features": [
       "card drafting",
       "dice rolling"
     ],
@@ -540,8 +566,8 @@ const boardGames = [
     "players": "3-5",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "party",
+    "features": [
       "card drafting",
       "bluffing"
     ],
@@ -552,252 +578,258 @@ const boardGames = [
     "players": "3-6",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "party",
+    "type": "party",
+    "features": [
       "auction",
       "hand management"
     ],
-    "gameId": 34
+    "gameId": 35
   },
   {
     "name": "Small World",
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 80,
-    "type": [
-      "strategy",
+    "type": "srategy",
+    "features": [
       "dice rolling",
       "area control"
     ],
-    "gameId": 35
+    "gameId": 36
   },
   {
     "name": "Splendor",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "set collection",
       "card drafting"
     ],
-    "gameId": 36
+    "gameId": 37
   },
   {
     "name": "Sushi Go!",
     "players": "2-5",
     "weight": "light",
     "timeToPlay": 15,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "card drafting",
       "hand management"
     ],
-    "gameId": 37
+    "gameId": 38
   },
   {
     "name": "Takenoko",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "grid movement",
       "modular board",
       "dice rolling"
     ],
-    "gameId": 38
+    "gameId": 39
   },
   {
     "name": "Tokaido",
     "players": "2-5",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "set collection"
     ],
-    "gameId": 39
+    "gameId": 40
   },
   {
     "name": "Terraforming Mars",
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "hand management",
       "card drafting",
       "tile placement"
     ],
-    "gameId": 40
+    "gameId": 41
   },
   {
     "name": "Viticulture",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 90,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "hand management",
       "worker placement"
     ],
-    "gameId": 41
+    "gameId": 42
   },
   {
     "name": "Twighlight Struggle",
     "players": "2",
     "weight": "heavy",
     "timeToPlay": 180,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "area control",
       "dice rolling",
       "hand management"
     ],
-    "gameId": 42
+    "gameId": 43
   },
   {
     "name": "Colt Express",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 40,
-    "type": [
+    "type": "family",
+    "features": [
       "family",
       "modular board",
       "memory"
     ],
-    "gameId": 43
+    "gameId": 44
   },
   {
     "name": "Gloomhaven",
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "grid movement",
       "cooperative",
       "modular board",
       "campaign"
     ],
-    "gameId": 44
+    "gameId": 45
   },
   {
     "name": "Spirit Island",
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "cooperative",
       "hand management",
       "area control"
     ],
-    "gameId": 45
+    "gameId": 46
   },
   {
     "name": "Twilight Imperium",
     "players": "3-6",
     "weight": "heavy",
     "timeToPlay": 300,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "grid movement",
       "area control",
       "dice rolling"
     ],
-    "gameId": 46
+    "gameId": 47
   },
   {
     "name": "Star Wars: Rebellion",
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 240,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "dice rolling",
-      "area movement",
-      "thematic"
+      "area control",
+      "hand management"
     ],
-    "gameId": 47
+    "gameId": 48
   },
   {
     "name": "Power Grid",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "auction",
       "route building"
     ],
-    "gameId": 48
+    "gameId": 49
   },
   {
     "name": "Photosynthesis",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
+    "type": "abstract",
+    "features": [
       "action point allowance"
     ],
-    "gameId": 49
+    "gameId": 50
   },
   {
     "name": "Root",
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 90,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "dice rolling",
       "area control",
       "hand management"
     ],
-    "gameId": 50
+    "gameId": 51
   },
   {
     "name": "Black Fleet",
     "players": "3-4",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "area movement",
       "pick-up and deliver"
     ],
-    "gameId": 51
+    "gameId": 52
   },
   {
     "name": "Cards Against Humanity",
     "players": "4-30",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "party",
+    "type": "party",
+    "features": [
       "hand management"
     ],
-    "gameId": 52
+    "gameId": 53
   },
   {
     "name": "Sorry!",
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "children's",
+    "type": "children's",
+    "features": [
       "roll / spin and move"
     ],
-    "gameId": 53
+    "gameId": 54
   },
   {
     "name": "Connect Four",
     "players": "2",
     "weight": "light",
     "timeToPlay": 10,
-    "type": [
-      "children's",
+    "type": "children's",
+    "features": [
       "pattern building"
     ],
-    "gameId": 54
+    "gameId": 55
   },
-
 ]
 
 module.exports = {
