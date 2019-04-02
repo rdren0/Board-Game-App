@@ -148,6 +148,66 @@ const localGameParlours = [
     "googleMapsLink": "https://goo.gl/maps/TZQz89KDYGo",
     "bringYourOwnGame": true,
     "gamesOffered": [3, 9, 36, 52]
+  },
+  {
+    "name": "Tabletop Tap",
+    "address": "3394 S Broadway, Englewood, CO 80113",
+    "website": "https://www.facebook.com/tabletoptap",
+    "hasFood": false,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1200,
+    "weekdayClose": 2300,
+    "weekendOpen": 1200,
+    "weekendClose": 2300,
+    "googleMapsLink": "https://goo.gl/maps/duQYiYhDrPr",
+    "bringYourOwnGame": true,
+    "gamesOffered": [8, 52, 53, 54]
+  },
+  {
+    "name": "Whiskey Bar",
+    "address": "2203 Larimer St, Denver, CO 80205",
+    "website": "http://www.whiskeybardenver.com/",
+    "hasFood": false;
+    "hasDrinks": true;
+    "sellsGames": false;
+    "weekdayOpen": 1600;
+    "weekdayClose": 0200;
+    "weekendOpen": 1600;
+    "weekendClose": 0200;
+    "googleMapsLink": "https://goo.gl/maps/L6qVhjpEhXU2"
+    "bringYourOwnGame": false;
+    "gamesOffered": [52, 53, 54]
+  },
+  {
+    "name": "Wyman's",
+    "address": "2033 E 13th Ave, Denver, CO 80206",
+    "website": "https://wymansno5.com/",
+    "hasFood": true;
+    "hasDrinks": true;
+    "sellsGames": false;
+    "weekdayOpen": 1400,
+    "weekdayClose": 0200,
+    "weekendOpen": 1100,
+    "weekendClose": 0200,
+    "googleMapsLink": "https://goo.gl/maps/yMhwgrvVNeT2"
+    "bringYourOwnGame": false;
+    "gamesOffered": [8, 25, 52, 53, 54]
+  },
+  {
+    "name": "Fainting Goat Pub",
+    "address": "846 Broadway, Denver, CO 80203",
+    "website": "http://thefaintinggoatdenver.com",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1100,
+    "weekdayClose": 0200,
+    "weekendOpen": 1100,
+    "weekendClose": 0200,
+    "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo"
+    "bringYourOwnGame": false,
+    "gamesOffered": [52, 53, 54]
   }
 ]
 
