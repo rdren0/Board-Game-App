@@ -208,6 +208,60 @@ const localGameParlours = [
     "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo"
     "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
+  },
+  {
+    "name":"Lollicup",
+    "address": "1589 S Colorado Blvd, Glendale, CO 80246",
+    "website":"http://www.lollicupdenver.com",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen":1100,
+    "weekdayClose":2200,
+    "weekendOpen":1100,
+    "weekendClose": 2300,
+    "bringYourOwnGame": true,
+    "gamesOffered":[54, 52, 37]
+  },
+  {
+    "name":"DAGAR",
+    "address":" 2000 Lawrence St Denver, CO 80205",
+    "website":"https://www.downtownaxeroom.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1700,
+    "weekdayClose": 2300,
+    "weekendOpen": 1300
+    "weekendClose": 2300
+    "bringYourOwnGame": false,
+    "gamesOffered":[34, 37]
+  },
+  {
+    "name": "The Bar Car",
+    "address":"819 Colorado Blvd Denver, CO80206,"
+    "website": "http://www.denverbarcar.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen":1300,
+    "weekdayClose":0200,
+    "weekendOpen":1100,
+    "weekendClose":0200,
+    "gamesOffered":[4,9,24]
+  },
+  {
+    "name": "Vine Street Pub & Brewery",
+    "address": "1700 Vine Street Denver, CO 80206",
+    "website": "http://www.mountainsunpub.com/index.php",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1130,
+    "weekdayClose": 1200,
+    "weekendOpen": 1100,
+    "weekendClose":1200,
+    "gamesOffered":[43, 15, 51, 53]
   }
 ]
 
