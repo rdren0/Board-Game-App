@@ -154,7 +154,8 @@ const localGameParlours = [
 const boardGames = [
   {
     "name": "7 Wonders",
-    "players": "2-7",
+    "minPlayers": 2,
+    "maxPlayers": 7,
     "weight": "medium",
     "timeToPlay": 30,
     "type": "strategy",
@@ -167,7 +168,8 @@ const boardGames = [
   },
   {
     "name": "Agricola",
-    "players": "1-5",
+    "minPlayers": 1,
+    "maxPlayers": 5,
     "weight": "heavy",
     "timeToPlay": 120,
     "type": "strategy",
@@ -180,7 +182,8 @@ const boardGames = [
   },
   {
     "name": "BANG!",
-    "players": "4-7",
+    "minPlayers": 4,
+    "maxPlayers": 7,
     "weight": "light",
     "timeToPlay": 30,
     "type": "party",
@@ -194,7 +197,8 @@ const boardGames = [
   },
   {
     "name": "Betrayal at House on the Hill",
-    "players": "3-6",
+    "minPlayers": 3,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 60,
     "type": "thematic",
@@ -209,7 +213,8 @@ const boardGames = [
   },
   {
     "name": "Boss Monster",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 20,
     "type": "strategy",
@@ -222,7 +227,8 @@ const boardGames = [
   },
   {
     "name": "Camel Up",
-    "players": "2-8",
+    "minPlayers": 2,
+    "maxPlayers": 8,
     "weight": "medium",
     "timeToPlay": 30,
     "type": "party",
@@ -236,7 +242,8 @@ const boardGames = [
   },
   {
     "name": "Carcassonne",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 45,
     "type": "strategy",
@@ -249,7 +256,8 @@ const boardGames = [
   },
   {
     "name": "Catan",
-    "players": "3-6",
+    "minPlayers": 3,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 100,
     "type": "strategy",
@@ -263,7 +271,8 @@ const boardGames = [
   },
   {
     "name": "Codenames",
-    "players": "2-8",
+    "minPlayers": 2,
+    "maxPlayers": 8,
     "weight": "light",
     "timeToPlay": 15,
     "type": "party",
@@ -277,7 +286,8 @@ const boardGames = [
   },
   {
     "name": "Coup",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 15,
     "type": "party",
@@ -291,7 +301,8 @@ const boardGames = [
   },
   {
     "name": "Dark Moon",
-    "players": "3-7",
+    "minPlayers": 3,
+    "maxPlayers": 7,
     "weight": "medium",
     "timeToPlay": 75,
     "type": "thematic",
@@ -305,7 +316,8 @@ const boardGames = [
   },
   {
     "name": "Dinosaur Island",
-    "players": "1-4",
+    "minPlayers": 1,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 120,
     "type": "strategy",
@@ -319,7 +331,8 @@ const boardGames = [
   },
   {
     "name": "Enchanted Forest",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "light",
     "timeToPlay": 60,
     "type": "children's",
@@ -333,7 +346,8 @@ const boardGames = [
   },
   {
     "name": "Five Tribes",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 80,
     "type": "strategy",
@@ -346,7 +360,8 @@ const boardGames = [
   },
   {
     "name": "Forbidden Island",
-    "players": "1-4",
+    "minPlayers": 1,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 120,
     "type": "family",
@@ -360,7 +375,8 @@ const boardGames = [
   },
   {
     "name": "Great Western Trail",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 150,
     "type": "strategy",
@@ -373,7 +389,8 @@ const boardGames = [
   },
   {
     "name": "Galaxy Trucker",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 60,
     "type": "thematic",
@@ -386,7 +403,8 @@ const boardGames = [
   },
   {
     "name": "Good Dog, Bad Zombie",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 90,
     "type": "strategy",
@@ -400,7 +418,8 @@ const boardGames = [
   },
   {
     "name": "Hive",
-    "players": "2",
+    "minPlayers": 2,
+    "maxPlayers": 2,
     "weight": "medium",
     "timeToPlay": 20,
     "type": "abstract",
@@ -413,7 +432,8 @@ const boardGames = [
   },
   {
     "name": "Istanbul",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 60,
     "type": "strategy",
@@ -427,7 +447,8 @@ const boardGames = [
   },
   {
     "name": "Jaipur",
-    "players": "2",
+    "minPlayers": 2,
+    "maxPlayers": 2,
     "weight": "light",
     "timeToPlay": 30,
     "type": "family",
@@ -440,7 +461,8 @@ const boardGames = [
   },
   {
     "name": "Lanterns: The Harvest Festival",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 30,
     "type": "family",
@@ -453,7 +475,8 @@ const boardGames = [
   },
   {
     "name": "Lords of Waterdeep",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 120,
     "type": "strategy",
@@ -467,7 +490,8 @@ const boardGames = [
   },
   {
     "name": "Machi Koro",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 30,
     "type": "family",
@@ -480,7 +504,8 @@ const boardGames = [
   },
   {
     "name": "Mouse Trap",
-    "players": "4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 30,
     "type": "children's",
@@ -492,7 +517,8 @@ const boardGames = [
   },
   {
     "name": "New York 1901",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 60,
     "type": "family",
@@ -506,7 +532,8 @@ const boardGames = [
   },
   {
     "name": "Niagara",
-    "players": "3-5",
+    "minPlayers": 3,
+    "maxPlayers": 5,
     "weight": "light",
     "timeToPlay": 45,
     "type": "family",
@@ -519,7 +546,8 @@ const boardGames = [
   },
   {
     "name": "Paperback",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 45,
     "type": "strategy",
@@ -532,7 +560,8 @@ const boardGames = [
   },
   {
     "name": "Patchwork",
-    "players": "2",
+    "minPlayers": 2,
+    "maxPlayers": 2,
     "weight": "light",
     "timeToPlay": 30,
     "type": "family",
@@ -545,7 +574,8 @@ const boardGames = [
   },
   {
     "name": "Pina Pirata",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "light",
     "timeToPlay": 30,
     "type": "family",
@@ -557,7 +587,8 @@ const boardGames = [
   },
   {
     "name": "Scythe",
-    "players": "1-5",
+    "minPlayers": 1,
+    "maxPlayers": 5,
     "weight": "heavy",
     "timeToPlay": 115,
     "type": "strategy",
@@ -570,7 +601,8 @@ const boardGames = [
   },
   {
     "name": "Race For the Galaxy",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 60,
     "type": "strategy",
@@ -583,7 +615,8 @@ const boardGames = [
   },
   {
     "name": "Sagrada",
-    "players": "1-4",
+    "minPlayers": 1,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 45,
     "type": "abstract",
@@ -596,7 +629,8 @@ const boardGames = [
   },
   {
     "name": "Sheriff of Nottingham",
-    "players": "3-5",
+    "minPlayers": 3,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 60,
     "type": "party",
@@ -609,7 +643,8 @@ const boardGames = [
   },
   {
     "name": "Skull",
-    "players": "3-6",
+    "minPlayers": 3,
+    "maxPlayers": 6,
     "weight": "light",
     "timeToPlay": 45,
     "type": "party",
@@ -622,7 +657,8 @@ const boardGames = [
   },
   {
     "name": "Small World",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "medium",
     "timeToPlay": 80,
     "type": "srategy",
@@ -635,7 +671,8 @@ const boardGames = [
   },
   {
     "name": "Splendor",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 30,
     "type": "family",
@@ -648,7 +685,8 @@ const boardGames = [
   },
   {
     "name": "Sushi Go!",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "light",
     "timeToPlay": 15,
     "type": "family",
@@ -661,7 +699,8 @@ const boardGames = [
   },
   {
     "name": "Takenoko",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 45,
     "type": "family",
@@ -675,7 +714,8 @@ const boardGames = [
   },
   {
     "name": "Tokaido",
-    "players": "2-5",
+    "minPlayers": 2,
+    "maxPlayers": 5,
     "weight": "light",
     "timeToPlay": 45,
     "type": "family",
@@ -687,7 +727,8 @@ const boardGames = [
   },
   {
     "name": "Terraforming Mars",
-    "players": "1-5",
+    "minPlayers": 1,
+    "maxPlayers": 5,
     "weight": "heavy",
     "timeToPlay": 120,
     "type": "strategy",
@@ -701,7 +742,8 @@ const boardGames = [
   },
   {
     "name": "Viticulture",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 90,
     "type": "strategy",
@@ -714,7 +756,8 @@ const boardGames = [
   },
   {
     "name": "Twighlight Struggle",
-    "players": "2",
+    "minPlayers": 2,
+    "maxPlayers": 2,
     "weight": "heavy",
     "timeToPlay": 180,
     "type": "strategy",
@@ -728,7 +771,8 @@ const boardGames = [
   },
   {
     "name": "Colt Express",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 40,
     "type": "family",
@@ -742,7 +786,8 @@ const boardGames = [
   },
   {
     "name": "Gloomhaven",
-    "players": "1-4",
+    "minPlayers": 1,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 120,
     "type": "strategy",
@@ -757,7 +802,8 @@ const boardGames = [
   },
   {
     "name": "Spirit Island",
-    "players": "1-4",
+    "minPlayers": 1,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 120,
     "type": "strategy",
@@ -771,7 +817,8 @@ const boardGames = [
   },
   {
     "name": "Twilight Imperium",
-    "players": "3-6",
+    "minPlayers": 3,
+    "maxPlayers": 6,
     "weight": "heavy",
     "timeToPlay": 300,
     "type": "strategy",
@@ -785,7 +832,8 @@ const boardGames = [
   },
   {
     "name": "Star Wars: Rebellion",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 240,
     "type": "strategy",
@@ -799,7 +847,8 @@ const boardGames = [
   },
   {
     "name": "Power Grid",
-    "players": "2-6",
+    "minPlayers": 2,
+    "maxPlayers": 6,
     "weight": "medium",
     "timeToPlay": 120,
     "type": "strategy",
@@ -812,7 +861,8 @@ const boardGames = [
   },
   {
     "name": "Photosynthesis",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "medium",
     "timeToPlay": 60,
     "type": "abstract",
@@ -824,7 +874,8 @@ const boardGames = [
   },
   {
     "name": "Root",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "heavy",
     "timeToPlay": 90,
     "type": "strategy",
@@ -838,7 +889,8 @@ const boardGames = [
   },
   {
     "name": "Black Fleet",
-    "players": "3-4",
+    "minPlayers": 3,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 60,
     "type": "family",
@@ -851,7 +903,8 @@ const boardGames = [
   },
   {
     "name": "Cards Against Humanity",
-    "players": "4-30",
+    "minPlayers": 4,
+    "maxPlayers": 30,
     "weight": "light",
     "timeToPlay": 30,
     "type": "party",
@@ -863,7 +916,8 @@ const boardGames = [
   },
   {
     "name": "Sorry!",
-    "players": "2-4",
+    "minPlayers": 2,
+    "maxPlayers": 4,
     "weight": "light",
     "timeToPlay": 30,
     "type": "children's",
@@ -875,7 +929,8 @@ const boardGames = [
   },
   {
     "name": "Connect Four",
-    "players": "2",
+    "minPlayers": 2,
+    "maxPlayers": 2,
     "weight": "light",
     "timeToPlay": 10,
     "type": "children's",
