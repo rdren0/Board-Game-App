@@ -1,0 +1,15 @@
+img {
+  height: 25px;
+  margin: 0 10px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}

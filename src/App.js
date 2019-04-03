@@ -7,6 +7,7 @@ import CardArea from './Components/CardArea.js'
 
 
 
+
 import './css/App.css';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header header={Header}/>
+        <NavBar NavBar={NavBar}/>
       </div>
     );
   }
