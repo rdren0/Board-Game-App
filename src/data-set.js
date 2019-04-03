@@ -10,7 +10,7 @@ const localGameParlours = [
     "weekdayClose": 2200,
     "weekendOpen": 1100,
     "weekendClose": 2200,
-    "googleMapsLink": "https://goo.gl/maps/cRFrmM57bzE2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.9782111286895!2d-105.0010209846252!3d39.717672379452566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f3d0faba253%3A0xdf9e63daf55833c2!2sBoard+Game+Republic!5e0!3m2!1sen!2sus!4v1554314717111!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [1, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 49]
   },
@@ -25,7 +25,7 @@ const localGameParlours = [
     "weekdayClose": 2300,
     "weekendOpen": 1300,
     "weekendClose": 0100,
-    "googleMapsLink": "https://goo.gl/maps/KrMBtpUw15k",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.9864208301856!2d-104.93227428481035!3d39.73995587944947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7d08d6ad57bf%3A0x28821152470f8869!2sThe+Game+Lounge!5e0!3m2!1sen!2sus!4v1554316588325!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [8, 9, 36, 37, 52, 53, 54]
   },
@@ -40,7 +40,7 @@ const localGameParlours = [
     "weekdayClose": 2200,
     "weekendOpen": 1200,
     "weekendClose": 2400,
-    "googleMapsLink": "https://goo.gl/maps/9yTLtJHqiZC2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.411272530152!2d-104.98954178481215!3d39.68545597945684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7fb2e0eac8eb%3A0x97e588676fcf31f8!2sGrandma&#39;s+House!5e0!3m2!1sen!2sus!4v1554316629618!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [52, 53, 54]
   },
@@ -55,7 +55,7 @@ const localGameParlours = [
     "weekdayClose": 2400,
     "weekendOpen": 0600,
     "weekendClose": 2400,
-    "googleMapsLink": "https://goo.gl/maps/z4hGoDryFU42",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3069.219880616145!2d-104.98966168481124!3d39.71224097945323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f1dc4a393ed%3A0xfd5da10773b6ffee!2sThe+Bardo+Coffee+House!5e0!3m2!1sen!2sus!4v1554316666164!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [7, 8, 15, 52, 53, 54]
   },
@@ -70,7 +70,7 @@ const localGameParlours = [
     "weekdayClose": 2200,
     "weekendOpen": 0700,
     "weekendClose": 2400,
-    "googleMapsLink": "https://goo.gl/maps/9PD2Fmp4Ja82",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98360.53400715753!2d-105.10490715094578!3d39.60993793185826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c838a278188ff%3A0xa5c7bf5434f602da!2sEnchanted+Grounds!5e0!3m2!1sen!2sus!4v1554316722060!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [1, 4, 8, 11, 12, 17, 19, 23, 26, 31, 40, 42, 50]
   },
@@ -85,7 +85,7 @@ const localGameParlours = [
     "weekdayClose": 2300,
     "weekendOpen": 1200,
     "weekendClose": 2000,
-    "googleMapsLink": "https://goo.gl/maps/r4YGMYKEZwF2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3071.8092307321886!2d-104.87167488481319!3d39.65400767946105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c8769569d21df%3A0x329b1ea21bf28ce2!2sDenver+Central+Games!5e0!3m2!1sen!2sus!4v1554316759742!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [1, 3, 4, 5, 6, 7, 8, 12, 13, 14, 15, 16, 19, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 38, 39, 40, 41, 49, 51]
   },
@@ -100,7 +100,7 @@ const localGameParlours = [
     "weekdayClose": 1900,
     "weekendOpen": 1000,
     "weekendClose": 1900,
-    "googleMapsLink": "https://goo.gl/maps/xmJTZBwLMG22",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.7133192349693!2d-104.99017768481093!3d39.72362497945173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7e97a97935a5%3A0x12f05befd1e2e4a8!2sThe+Wizard&#39;s+Chest!5e0!3m2!1sen!2sus!4v1554316787499!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [1, 8, 23, 46, 47, 50]
   },
@@ -115,7 +115,7 @@ const localGameParlours = [
     "weekdayClose": 2100,
     "weekendOpen": 1000,
     "weekendClose": 2200,
-    "googleMapsLink": "https://goo.gl/maps/mWgXKJRvCg42",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49123.558284784325!2d-105.15383372089843!3d39.68970339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b8178d82cda41%3A0x1923b47b6bf1ab38!2sLevel+7+Games!5e0!3m2!1sen!2sus!4v1554316833938!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [1, 4, 7, 8, 15, 19, 23, 26, 35, 41, 42, 43, 44]
   },
@@ -130,7 +130,7 @@ const localGameParlours = [
     "weekdayClose": 2300,
     "weekendOpen": 1100,
     "weekendClose": 2300,
-    "googleMapsLink": "https://goo.gl/maps/tHGVH9Uv2vB2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49059.33804536729!2d-105.0759309471884!3d39.779873187561485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78eb1e2669b3%3A0xb9a1e6213d9a0c91!2sDenver+Beer+Co!5e0!3m2!1sen!2sus!4v1554316867693!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [8, 9, 52, 54]
   },
@@ -145,7 +145,7 @@ const localGameParlours = [
     "weekdayClose": 2200,
     "weekendOpen": 1200,
     "weekendClose": 2200,
-    "googleMapsLink": "https://goo.gl/maps/TZQz89KDYGo",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.4965700667867!2d-104.98675968481001!3d39.75095797944806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c79279961a8db%3A0xf30a514d0616f2ec!2sWoods+Boss+Brewing+Company!5e0!3m2!1sen!2sus!4v1554316902767!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [3, 9, 36, 52]
   },
@@ -160,7 +160,7 @@ const localGameParlours = [
     "weekdayClose": 2300,
     "weekendOpen": 1200,
     "weekendClose": 2300,
-    "googleMapsLink": "https://goo.gl/maps/duQYiYhDrPr",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49148.112661380335!2d-105.02240532089843!3d39.655182100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c807fb4122b4b%3A0xe886dc808209b223!2sThe+Tabletop+Tap!5e0!3m2!1sen!2sus!4v1554316932109!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [8, 52, 53, 54]
   },
@@ -175,7 +175,7 @@ const localGameParlours = [
     "weekdayClose": 0200,
     "weekendOpen": 1600,
     "weekendClose": 0200,
-    "googleMapsLink": "https://goo.gl/maps/L6qVhjpEhXU2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98221.66132770527!2d-105.06285804752905!3d39.70758745940181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78de8c8b1189%3A0x7af3ac996a4bf523!2sWhiskey+Bar!5e0!3m2!1sen!2sus!4v1554316957261!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
   },
@@ -190,7 +190,7 @@ const localGameParlours = [
     "weekdayClose": 0200,
     "weekendOpen": 1100,
     "weekendClose": 0200,
-    "googleMapsLink": "https://goo.gl/maps/yMhwgrvVNeT2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.1193436973335!2d-104.96481168481041!3d39.7369699794499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7eca0672e20f%3A0xc2f809aac75a85fb!2sWyman&#39;s!5e0!3m2!1sen!2sus!4v1554316980685!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": false,
     "gamesOffered": [8, 25, 52, 53, 54]
   },
@@ -205,13 +205,13 @@ const localGameParlours = [
     "weekdayClose": 0200,
     "weekendOpen": 1100,
     "weekendClose": 0200,
-    "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.4310180106763!2d-104.9893626848107!3d39.72996797945093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f2838106741%3A0x9a19d35b34950c09!2sThe+Fainting+Goat!5e0!3m2!1sen!2sus!4v1554317004500!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
   },
   {
     "name": "Colorado Cider Company",
-    "address": "12650 W 2nd Ave #10, Denver, CO 80219",
+    "address": "2650 W 2nd Ave #10, Denver, CO 80219",
     "website": "https://coloradocider.com/",
     "hasFood": true,
     "hasDrinks": true,
@@ -220,7 +220,7 @@ const localGameParlours = [
     "weekdayClose": null,
     "weekendOpen": 1600,
     "weekendClose": 2000,
-    "googleMapsLink": "https://goo.gl/maps/9QiNVJhctSD2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.9171464414535!2d-105.02175018481104!3d39.71904467945237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7f44c6676673%3A0x8550039143ee3fa2!2sColorado+Cider+Company!5e0!3m2!1sen!2sus!4v1554317033154!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [17, 23, 24, 50]
   },
@@ -235,7 +235,7 @@ const localGameParlours = [
     "weekdayClose": 1800,
     "weekendOpen": 2400,
     "weekendClose": 2400,
-    "googleMapsLink": "https://goo.gl/maps/dNsRkfWwVuo",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.172056966853!2d-105.01459668480979!3d39.75824517944716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78945a75a4a3%3A0x3f9bd336b268fac9!2sRed+Poppy+Tea+%26+Hookah+Parlour!5e0!3m2!1sen!2sus!4v1554317068836!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [33, 34, 47, 51]
   },
@@ -250,7 +250,7 @@ const localGameParlours = [
     "weekdayClose": 1700,
     "weekendOpen": 0630,
     "weekendClose": 1700,
-    "googleMapsLink": "https://goo.gl/maps/xGrbnNS1xQA2",
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.3333014687837!2d-105.0839412848084!3d39.799514879441716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b862cf0d17113%3A0xe0044f098ba0605a!2sGlobal+Goods+%26+Coffee+Shop!5e0!3m2!1sen!2sus!4v1554317093907!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered": [7, 26, 30, 33, 39, 43]
   },
@@ -265,8 +265,7 @@ const localGameParlours = [
     "weekdayClose": null,
     "weekendOpen": 1600,
     "weekendClose": 2200,
-    "googleMapsLink": "https://goo.gl/maps/fFHNvu6FcaA2",
-    "bringYourOwnGame": true,
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.2844256432313!2d-105.05729088480831!3d39.80061137944148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b87e7f97ce21f%3A0x37041e8cdcbc5aaa!2sTalnua+Distillery+%26+Tasting+Room!5e0!3m2!1sen!2sus!4v1554317122141!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",    "bringYourOwnGame": true,
     "gamesOffered": [2, 3, 25, 26, 50]
   },
   {
@@ -280,6 +279,7 @@ const localGameParlours = [
     "weekdayClose":2200,
     "weekendOpen":1100,
     "weekendClose": 2300,
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.3061803642677!2d-104.94426508481203!3d39.68781927945663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7e785f05bba5%3A0xa184d1cd6f311f11!2sLollicup!5e0!3m2!1sen!2sus!4v1554317144890!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": true,
     "gamesOffered":[54, 52, 37]
   },
@@ -294,6 +294,7 @@ const localGameParlours = [
     "weekdayClose": 2300,
     "weekendOpen": 1300,
     "weekendClose": 2300,
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.4348882530803!2d-104.99360518480995!3d39.7523431794479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c78d95622cee5%3A0xe022113da6f17926!2sDowntown+Art+Gallery+and+Axe+Room!5e0!3m2!1sen!2sus!4v1554317229415!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
     "bringYourOwnGame": false,
     "gamesOffered":[34, 37]
   },
@@ -308,6 +309,8 @@ const localGameParlours = [
     "weekdayClose":0200,
     "weekendOpen":1100,
     "weekendClose":0200,
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3068.4585599463912!2d-104.94312248481067!3d39.72934917945096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7ea730ea0295%3A0x6e15ae4e23bf919b!2sThe+Bar+Car!5e0!3m2!1sen!2sus!4v1554317259395!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
+    "bringYourOwnGame": false,
     "gamesOffered":[4,9,24]
   },
   {
@@ -321,6 +324,8 @@ const localGameParlours = [
     "weekdayClose": 1200,
     "weekendOpen": 1100,
     "weekendClose":1200,
+    "googleMapsLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.8299022541237!2d-104.96418148481018!3d39.74347157944906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c794a8364a3d5%3A0xb8f5c91fdf4d5bba!2sVine+Street+Pub+%26+Brewery!5e0!3m2!1sen!2sus!4v1554317304380!5m2!1sen!2sus\" width=\"400\" height=\"300\" frameborder=\"0\" style=\"border:0\" allowfullscreen></iframe>",
+    "bringYourOwnGame": false,
     "gamesOffered":[43, 15, 51, 53]
   }
 ]
