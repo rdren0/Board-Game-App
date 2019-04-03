@@ -168,30 +168,30 @@ const localGameParlours = [
     "name": "Whiskey Bar",
     "address": "2203 Larimer St, Denver, CO 80205",
     "website": "http://www.whiskeybardenver.com/",
-    "hasFood": false;
-    "hasDrinks": true;
-    "sellsGames": false;
-    "weekdayOpen": 1600;
-    "weekdayClose": 0200;
-    "weekendOpen": 1600;
-    "weekendClose": 0200;
-    "googleMapsLink": "https://goo.gl/maps/L6qVhjpEhXU2"
-    "bringYourOwnGame": false;
+    "hasFood": false,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1600,
+    "weekdayClose": 0200,
+    "weekendOpen": 1600,
+    "weekendClose": 0200,
+    "googleMapsLink": "https://goo.gl/maps/L6qVhjpEhXU2",
+    "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
   },
   {
     "name": "Wyman's",
     "address": "2033 E 13th Ave, Denver, CO 80206",
     "website": "https://wymansno5.com/",
-    "hasFood": true;
-    "hasDrinks": true;
-    "sellsGames": false;
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
     "weekdayOpen": 1400,
     "weekdayClose": 0200,
     "weekendOpen": 1100,
     "weekendClose": 0200,
-    "googleMapsLink": "https://goo.gl/maps/yMhwgrvVNeT2"
-    "bringYourOwnGame": false;
+    "googleMapsLink": "https://goo.gl/maps/yMhwgrvVNeT2",
+    "bringYourOwnGame": false,
     "gamesOffered": [8, 25, 52, 53, 54]
   },
   {
@@ -205,7 +205,7 @@ const localGameParlours = [
     "weekdayClose": 0200,
     "weekendOpen": 1100,
     "weekendClose": 0200,
-    "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo"
+    "googleMapsLink": "https://goo.gl/maps/3n5j2P2x3bo",
     "bringYourOwnGame": false,
     "gamesOffered": [52, 53, 54]
   },
@@ -269,7 +269,7 @@ const localGameParlours = [
     "bringYourOwnGame": true,
     "gamesOffered": [2, 3, 25, 26, 50]
   },
-
+  {
     "name":"Lollicup",
     "address": "1589 S Colorado Blvd, Glendale, CO 80246",
     "website":"http://www.lollicupdenver.com",
@@ -292,15 +292,15 @@ const localGameParlours = [
     "sellsGames": false,
     "weekdayOpen": 1700,
     "weekdayClose": 2300,
-    "weekendOpen": 1300
-    "weekendClose": 2300
+    "weekendOpen": 1300,
+    "weekendClose": 2300,
     "bringYourOwnGame": false,
     "gamesOffered":[34, 37]
   },
   {
     "name": "The Bar Car",
-    "address":"819 Colorado Blvd Denver, CO80206,"
-    "website": "http://www.denverbarcar.com/",
+    "address":"819 Colorado Blvd Denver, CO80206",
+    "website": "http://www.denverbarcar.com/", 
     "hasFood": true,
     "hasDrinks": true,
     "sellsGames": false,
@@ -488,7 +488,7 @@ const boardGames = [
       "science fiction",
       "dice rolling"
     ],
-    "image": "https://imgur.com/528BkXG"
+    "image": "https://imgur.com/528BkXG",
     "gameId": 12
   },
   {
@@ -739,7 +739,7 @@ const boardGames = [
       "area control",
       "grid movement"
     ],
-    "image": "https://imgur.com/GsRqPxz";
+    "image": "https://imgur.com/GsRqPxz",
     "gameId": 31
   },
   {
@@ -752,7 +752,7 @@ const boardGames = [
       "card game",
       "hand management"
     ],
-    "image": "https://imgur.com/YiBIgWM"
+    "image": "https://imgur.com/YiBIgWM",
     "gameId": 32
   },
   {
