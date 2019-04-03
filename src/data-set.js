@@ -224,21 +224,6 @@ const localGameParlours = [
     "bringYourOwnGame": true,
     "gamesOffered": [17, 23, 24, 50]
   },
-  {
-    "name": "Colorado Cider Company",
-    "address": "12650 W 2nd Ave #10, Denver, CO 80219",
-    "website": "https://coloradocider.com/",
-    "hasFood": true,
-    "hasDrinks": true,
-    "sellsGames": false,
-    "weekdayOpen": null,
-    "weekdayClose": null,
-    "weekendOpen": 1600,
-    "weekendClose": 2000,
-    "googleMapsLink": "https://goo.gl/maps/9QiNVJhctSD2",
-    "bringYourOwnGame": true,
-    "gamesOffered": [17, 23, 24, 50]
-  },
    {
     "name": "Red Poppy Tea & Hookah Parlour",
     "address": "2120 W 29th Ave, Denver, CO 80211",
@@ -285,6 +270,59 @@ const localGameParlours = [
     "gamesOffered": [2, 3, 25, 26, 50]
   },
 
+    "name":"Lollicup",
+    "address": "1589 S Colorado Blvd, Glendale, CO 80246",
+    "website":"http://www.lollicupdenver.com",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen":1100,
+    "weekdayClose":2200,
+    "weekendOpen":1100,
+    "weekendClose": 2300,
+    "bringYourOwnGame": true,
+    "gamesOffered":[54, 52, 37]
+  },
+  {
+    "name":"DAGAR",
+    "address":" 2000 Lawrence St Denver, CO 80205",
+    "website":"https://www.downtownaxeroom.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1700,
+    "weekdayClose": 2300,
+    "weekendOpen": 1300
+    "weekendClose": 2300
+    "bringYourOwnGame": false,
+    "gamesOffered":[34, 37]
+  },
+  {
+    "name": "The Bar Car",
+    "address":"819 Colorado Blvd Denver, CO80206,"
+    "website": "http://www.denverbarcar.com/",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen":1300,
+    "weekdayClose":0200,
+    "weekendOpen":1100,
+    "weekendClose":0200,
+    "gamesOffered":[4,9,24]
+  },
+  {
+    "name": "Vine Street Pub & Brewery",
+    "address": "1700 Vine Street Denver, CO 80206",
+    "website": "http://www.mountainsunpub.com/index.php",
+    "hasFood": true,
+    "hasDrinks": true,
+    "sellsGames": false,
+    "weekdayOpen": 1130,
+    "weekdayClose": 1200,
+    "weekendOpen": 1100,
+    "weekendClose":1200,
+    "gamesOffered":[43, 15, 51, 53]
+  }
 ]
 
 const boardGames = [
@@ -293,9 +331,12 @@ const boardGames = [
     "players": "2-7",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "city building",
-      "manage resources"],
+    "type": "strategy",
+    "features": [
+      "card drafting",
+      "hand management"
+    ],
+    "image": "https://imgur.com/lkrz4I3",
     "gameId": 1
   },
   {
@@ -303,10 +344,12 @@ const boardGames = [
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "city building",
-      "manage resources"
+    "type": "strategy",
+    "features": [
+      "economic",
+      "worker placement"
     ],
+    "image": "https://imgur.com/WWkmwwr",
     "gameId": 2
   },
   {
@@ -314,11 +357,13 @@ const boardGames = [
     "players": "4-7",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "bluff / deceive",
-      "social",
-      "laugh out loud"
+    "type": "party",
+    "features": [
+      "bluffing",
+      "card game",
+      "hand management"
     ],
+    "image": "https://imgur.com/HqnAIxh",
     "gameId": 3
   },
   {
@@ -326,12 +371,14 @@ const boardGames = [
     "players": "3-6",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "cooperative",
-      "bluff / deceive",
-      "exploration",
-      "survive"
+    "type": "thematic",
+    "features": [
+      "adventure",
+      "hidden traitor",
+      "dice rolling",
+      "cooperative"
     ],
+    "image": "https://imgur.com/t12PXuZ",
     "gameId": 4
   },
   {
@@ -339,9 +386,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 20,
-    "type": [
-      "survive"
+    "type": "strategy",
+    "features": [
+      "auction",
+      "family"
     ],
+    "image": "https://imgur.com/pbutakO",
     "gameId": 5
   },
   {
@@ -349,21 +399,26 @@ const boardGames = [
     "players": "2-8",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "laugh out loud",
-      "family"
+    "type": "party",
+    "features": [
+      "dice rolling",
+      "family",
+      "wagering"
     ],
+    "image": "https://imgur.com/93iAMYa",
     "gameId": 6
   },
   {
-    "name": "Carcassone",
+    "name": "Carcassonne",
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "think critically",
-      "territory control"
+    "type": "strategy",
+    "features": [
+      "city building",
+      "family"
     ],
+    "image": "https://imgur.com/z2yn7Zk",
     "gameId": 7
   },
   {
@@ -371,11 +426,13 @@ const boardGames = [
     "players": "3-6",
     "weight": "medium",
     "timeToPlay": 100,
-    "type": [
-      "trade",
-      "risk take",
-      "manage resources"
+    "type": "strategy",
+    "features": [
+      "trading",
+      "dice rolling",
+      "family"
     ],
+    "image": "https://imgur.com/X88PcfC",
     "gameId": 8
   },
   {
@@ -383,11 +440,13 @@ const boardGames = [
     "players": "2-8",
     "weight": "light",
     "timeToPlay": 15,
-    "type": [
-      "social",
-      "guessing",
-      "think critically"
+    "type": "party",
+    "features": [
+      "card game",
+      "deduction",
+      "memory"
     ],
+    "image": "https://imgur.com/GjIgusi",
     "gameId": 9
   },
   {
@@ -395,10 +454,13 @@ const boardGames = [
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 15,
-    "type": [
-      "bluff / deceive",
-      "negotiate"
+    "type": "party",
+    "features": [
+      "bluffing",
+      "card game",
+      "memory"
     ],
+    "image": "https://imgur.com/3QBG5r1",
     "gameId": 10
   },
   {
@@ -406,11 +468,13 @@ const boardGames = [
     "players": "3-7",
     "weight": "medium",
     "timeToPlay": 75,
-    "type": [
-      "bluff / deceive",
-      "negotiate",
-      "persuasion"
+    "type": "thematic",
+    "features": [
+      "bluffing",
+      "dice rolling",
+      "hidden traitor"
     ],
+    "image": "https://imgur.com/jZ0nBWW",
     "gameId": 11
   },
   {
@@ -418,10 +482,13 @@ const boardGames = [
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "economic",
-      "science fiction"
+    "type": "strategy",
+    "features": [
+      "worker placement",
+      "science fiction",
+      "dice rolling"
     ],
+    "image": "https://imgur.com/528BkXG"
     "gameId": 12
   },
   {
@@ -429,12 +496,13 @@ const boardGames = [
     "players": "2-6",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "children's",
+    "features": [
       "adventure",
       "card game",
       "memory"
     ],
+    "image": "https://imgur.com/UZbJtfX",
     "gameId": 13
   },
   {
@@ -442,10 +510,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 80,
-    "type": [
-      "strategy",
-      "mythology"
+    "type": "strategy",
+    "features": [
+      "area control",
+      "auction"
     ],
+    "image": "https://imgur.com/LK1PBOH",
     "gameId": 14
   },
   {
@@ -453,11 +523,13 @@ const boardGames = [
     "players": "1-4",
     "weight": "light",
     "timeToPlay": 120,
-    "type": [
+    "type": "family",
+    "features": [
       "cooperative",
-      "family",
-      "science fiction"
+      "adventure",
+      "modular board"
     ],
+    "image": "https://imgur.com/tC9mVfa",
     "gameId": 15
   },
   {
@@ -465,11 +537,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 150,
-    "type": [
-      "strategy",
-      "american west",
-      "animals"
+    "type": "strategy",
+    "features": [
+      "set collection",
+      "deck building"
     ],
+    "image": "https://imgur.com/2VUqHE3",
     "gameId": 16
   },
   {
@@ -477,11 +550,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 60,
-    "type": [
-      "thematic",
-      "science fiction",
-      "transportation"
+    "type": "thematic",
+    "features": [
+      "dice rolling",
+      "tile placement"
     ],
+    "image": "https://imgur.com/fKT57qx",
     "gameId": 17
   },
   {
@@ -489,11 +563,13 @@ const boardGames = [
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 90,
-    "type": [
+    "type": "strategy",
+    "features": [
       "cooperative",
-      "zombies",
-      "animals"
+      "hand management",
+      "area movement"
     ],
+    "image": "https://imgur.com/z5ZaZOb",
     "gameId": 18
   },
   {
@@ -501,10 +577,12 @@ const boardGames = [
     "players": "2",
     "weight": "medium",
     "timeToPlay": 20,
-    "type": [
-      "strategy",
-      "abstract"
+    "type": "abstract",
+    "features": [
+      "grid movement",
+      "tile placement"
     ],
+    "image": "https://imgur.com/VaZN5l8",
     "gameId": 19
   },
   {
@@ -512,11 +590,13 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
-      "economic",
+    "type": "strategy",
+    "features": [
+      "modular board",
+      "grid movement",
       "pick-up and deliver"
     ],
+    "image": "https://imgur.com/rXzdNjt",
     "gameId": 20
   },
   {
@@ -524,11 +604,12 @@ const boardGames = [
     "players": "2",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
-      "animals",
-      "card game"
+    "type": "family",
+    "features": [
+      "card drafting",
+      "set collection"
     ],
+    "image": "https://imgur.com/Y1lMCOX",
     "gameId": 21
   },
   {
@@ -536,10 +617,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "tile placement",
       "hand management"
     ],
+    "image": "https://imgur.com/6nnQGYo",
     "gameId": 22
   },
   {
@@ -547,11 +630,13 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "set collection",
       "card drafting",
       "worker placement"
     ],
+    "image": "https://imgur.com/dWWepJF",
     "gameId": 23
   },
   {
@@ -559,11 +644,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "card drafting",
       "dice rolling"
     ],
+    "image": "https://imgur.com/395NatC",
     "gameId": 24
   },
   {
@@ -571,10 +657,11 @@ const boardGames = [
     "players": "4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "children's",
-      "roll / spin"
+    "type": "children's",
+    "features": [
+      "roll / spin and move"
     ],
+    "image": "https://imgur.com/f3IneLM",
     "gameId": 25
   },
   {
@@ -582,11 +669,13 @@ const boardGames = [
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
-      "tile placing",
+    "type": "family",
+    "features": [
+      "area control",
+      "tile placement",
       "card drafting"
     ],
+    "image": "https://imgur.com/IbkG4sC",
     "gameId": 26
   },
   {
@@ -594,11 +683,12 @@ const boardGames = [
     "players": "3-5",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "hand management",
       "pick-up and deliver"
     ],
+    "image": "https://imgur.com/9rk1YRW",
     "gameId": 27
   },
   {
@@ -606,12 +696,12 @@ const boardGames = [
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
+    "type": "strategy",
+    "features": [
       "cooperative",
-      "strategy",
-      "deck building",
       "card drafting"
     ],
+    "image": "https://imgur.com/sf2mYGJ",
     "gameId": 28
   },
   {
@@ -619,10 +709,12 @@ const boardGames = [
     "players": "2",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "abstract",
+    "type": "family",
+    "features": [
+      "card drafting",
       "tile placement"
     ],
+    "image": "https://imgur.com/7OtnVf1",
     "gameId": 29
   },
   {
@@ -630,10 +722,11 @@ const boardGames = [
     "players": "2-6",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "hand management"
     ],
+    "image": "https://imgur.com/uhpyVRi",
     "gameId": 30
   },
   {
@@ -641,11 +734,12 @@ const boardGames = [
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 115,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "area control",
       "grid movement"
     ],
+    "image": "https://imgur.com/GsRqPxz";
     "gameId": 31
   },
   {
@@ -653,10 +747,12 @@ const boardGames = [
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "card game",
       "hand management"
     ],
+    "image": "https://imgur.com/YiBIgWM"
     "gameId": 32
   },
   {
@@ -664,11 +760,12 @@ const boardGames = [
     "players": "1-4",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "abstract",
+    "features": [
       "card drafting",
       "dice rolling"
     ],
+    "image": "https://imgur.com/0dAj8Jy",
     "gameId": 33
   },
   {
@@ -676,11 +773,12 @@ const boardGames = [
     "players": "3-5",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "party",
+    "features": [
       "card drafting",
       "bluffing"
     ],
+    "image": "https://imgur.com/QCRzKwR",
     "gameId": 34
   },
   {
@@ -688,252 +786,279 @@ const boardGames = [
     "players": "3-6",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "party",
+    "type": "party",
+    "features": [
       "auction",
       "hand management"
     ],
-    "gameId": 34
+    "image": "https://imgur.com/j0jCA9a",
+    "gameId": 35
   },
   {
     "name": "Small World",
     "players": "2-5",
     "weight": "medium",
     "timeToPlay": 80,
-    "type": [
-      "strategy",
+    "type": "srategy",
+    "features": [
       "dice rolling",
       "area control"
     ],
-    "gameId": 35
+    "image": "https://imgur.com/LpD6ubg",
+    "gameId": 36
   },
   {
     "name": "Splendor",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 30,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "set collection",
       "card drafting"
     ],
-    "gameId": 36
+    "image": "https://imgur.com/bLhlTCj",
+    "gameId": 37
   },
   {
     "name": "Sushi Go!",
     "players": "2-5",
     "weight": "light",
     "timeToPlay": 15,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "card drafting",
       "hand management"
     ],
-    "gameId": 37
+    "image": "https://imgur.com/Sop5ijM",
+    "gameId": 38
   },
   {
     "name": "Takenoko",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
+      "grid movement",
       "modular board",
       "dice rolling"
     ],
-    "gameId": 38
+    "image": "https://imgur.com/5ulz6sb",
+    "gameId": 39
   },
   {
     "name": "Tokaido",
     "players": "2-5",
     "weight": "light",
     "timeToPlay": 45,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "set collection"
     ],
-    "gameId": 39
+    "image": "https://imgur.com/IzYOwcx",
+    "gameId": 40
   },
   {
     "name": "Terraforming Mars",
     "players": "1-5",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "hand management",
       "card drafting",
       "tile placement"
     ],
-    "gameId": 40
+    "image": "https://imgur.com/xvN2EWY",
+    "gameId": 41
   },
   {
     "name": "Viticulture",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 90,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "hand management",
       "worker placement"
     ],
-    "gameId": 41
+    "image": "https://imgur.com/qdeYX6B",
+    "gameId": 42
   },
   {
     "name": "Twighlight Struggle",
     "players": "2",
     "weight": "heavy",
     "timeToPlay": 180,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "area control",
       "dice rolling",
       "hand management"
     ],
-    "gameId": 42
+    "image": "https://imgur.com/KWKrMpG",
+    "gameId": 43
   },
   {
     "name": "Colt Express",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 40,
-    "type": [
+    "type": "family",
+    "features": [
       "family",
       "modular board",
       "memory"
     ],
-    "gameId": 43
+    "image": "https://imgur.com/3L4cMfA",
+    "gameId": 44
   },
   {
     "name": "Gloomhaven",
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "grid movement",
       "cooperative",
       "modular board",
       "campaign"
     ],
-    "gameId": 44
+    "image": "https://imgur.com/qcyc4cg",
+    "gameId": 45
   },
   {
     "name": "Spirit Island",
     "players": "1-4",
     "weight": "heavy",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "cooperative",
       "hand management",
       "area control"
     ],
-    "gameId": 45
+    "image": "https://imgur.com/qVFdsJh",
+    "gameId": 46
   },
   {
     "name": "Twilight Imperium",
     "players": "3-6",
     "weight": "heavy",
     "timeToPlay": 300,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "grid movement",
       "area control",
       "dice rolling"
     ],
-    "gameId": 46
+    "image": "https://imgur.com/3LdaW9S",
+    "gameId": 47
   },
   {
     "name": "Star Wars: Rebellion",
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 240,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "dice rolling",
-      "area movement",
-      "thematic"
+      "area control",
+      "hand management"
     ],
-    "gameId": 47
+    "image": "https://imgur.com/P691LRS",
+    "gameId": 48
   },
   {
     "name": "Power Grid",
     "players": "2-6",
     "weight": "medium",
     "timeToPlay": 120,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
       "auction",
       "route building"
     ],
-    "gameId": 48
+    "image": "https://imgur.com/yN5Zskw",
+    "gameId": 49
   },
   {
     "name": "Photosynthesis",
     "players": "2-4",
     "weight": "medium",
     "timeToPlay": 60,
-    "type": [
-      "strategy",
+    "type": "abstract",
+    "features": [
       "action point allowance"
     ],
-    "gameId": 49
+    "image": "https://imgur.com/bCaRe7u",
+    "gameId": 50
   },
   {
     "name": "Root",
     "players": "2-4",
     "weight": "heavy",
     "timeToPlay": 90,
-    "type": [
-      "strategy",
+    "type": "strategy",
+    "features": [
+      "dice rolling",
       "area control",
       "hand management"
     ],
-    "gameId": 50
+    "image": "https://imgur.com/ZA04kW4",
+    "gameId": 51
   },
   {
     "name": "Black Fleet",
     "players": "3-4",
     "weight": "light",
     "timeToPlay": 60,
-    "type": [
-      "family",
+    "type": "family",
+    "features": [
       "area movement",
       "pick-up and deliver"
     ],
-    "gameId": 51
+    "image": "https://imgur.com/N2MhSxE",
+    "gameId": 52
   },
   {
     "name": "Cards Against Humanity",
     "players": "4-30",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "party",
+    "type": "party",
+    "features": [
       "hand management"
     ],
-    "gameId": 52
+    "image": "https://imgur.com/D5sXbfY",
+    "gameId": 53
   },
   {
     "name": "Sorry!",
     "players": "2-4",
     "weight": "light",
     "timeToPlay": 30,
-    "type": [
-      "children's",
+    "type": "children's",
+    "features": [
       "roll / spin and move"
     ],
-    "gameId": 53
+    "image": "https://imgur.com/wYbcM13",
+    "gameId": 54
   },
   {
     "name": "Connect Four",
     "players": "2",
     "weight": "light",
     "timeToPlay": 10,
-    "type": [
-      "children's",
+    "type": "children's",
+    "features": [
       "pattern building"
     ],
-    "gameId": 54
+    "image": "https://imgur.com/pCz4Quv",
+    "gameId": 55
   },
-
 ]
 
 module.exports = {
