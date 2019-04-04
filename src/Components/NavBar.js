@@ -7,10 +7,6 @@ import fourPlayers from '../images/Four-Players.svg'
 import fivePlayers from '../images/Five-Players.svg'
 import groupPlayers from '../images/Group-Players.svg'
 
-
-
-
-
 class NavBar extends Component {
   constructor() {
     super();
