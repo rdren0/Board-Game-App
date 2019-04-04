@@ -29,20 +29,24 @@ class NavBar extends Component {
           <li><img src={groupPlayers} alt="Group Player Games"/></li>
         </ul>
         <select>
-          <option>Weight</option>
+          <option>Weight </option>
           <option>Light</option>
           <option>Medium</option>
           <option>Heavy</option>
         </select>
         <select>
-          <option></option>
+          <option>Type</option>
+          <option>Party</option>
+          <option>Strategy</option>
+          <option>Thematic</option>
+          <option>Children's</option>
+          <option>Family</option>
+          <option>Abstract</option>
         </select>
-        // <select>Locations</select>
-
+        <button>Locations</button>
       </nav>
     )
   }
-
 }
 
 export default NavBar;
