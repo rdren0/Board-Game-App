@@ -13,3 +13,12 @@ nav {
   flex-flow: row;
   justify-content: space-around;
 }
+
+select {
+  width: 100px;
+  margin: 10px;
+}
+
+button {
+  margin:10px;
+}

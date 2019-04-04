@@ -4,10 +4,6 @@ import React, { Component } from 'react';
 import Header from './Components/Header.js'
 import NavBar from './Components/NavBar.js'
 import CardArea from './Components/CardArea.js'
-
-
-
-
 import './css/App.css';
 
 class App extends Component {
