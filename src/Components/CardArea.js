@@ -31,9 +31,9 @@ class CardArea extends Component {
     return (
       <div>
         <NavBar NavBar={NavBar}/>
-        <div>
+        <section className = 'cardContainer'>
           {gamesCards}
-        </div>
+        </section>
       </div>
     )
   } else {
