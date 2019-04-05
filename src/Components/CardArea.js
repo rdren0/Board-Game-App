@@ -12,9 +12,7 @@ class CardArea extends Component {
   }
 
   render() {
-    let gamesCards = "loading";
-  if(this.props.gamesData.length !== 0) {
-    console.log(this.props.gamesData);
+    if (this.props.gamesData) {
     let gamesCards =
      this.props.gamesData.map((game) => {
       return <Game
@@ -29,10 +27,6 @@ class CardArea extends Component {
       id={game.gameId}
       />
     });
-
-
-  }
-
     return (
       <div>
         <NavBar NavBar={NavBar}/>
@@ -41,6 +35,13 @@ class CardArea extends Component {
         </div>
       </div>
     )
+  } else {
+    return (
+      <div>
+        {this.props.cardArea}
+      </div>
+      )
+    }
   }
 }
 

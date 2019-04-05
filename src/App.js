@@ -35,16 +35,26 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <Header header={Header}/>
-          <CardArea
-            gamesData={this.state.games}
-            locationData={this.state.locations} />
+    let cardArea = "loading";
+    if (this.state.games.length !== 0) {
+      return (
+        <div className="App">
+          <Header header={Header}/>
+            <CardArea
+              gamesData={this.state.games}
+              locationData={this.state.locations} />
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <Header header={Header}/>
+            <CardArea cardArea={cardArea} />
+        </div>
+      )
+    }
+    }
 
-      </div>
-    );
-  }
 }
 
 export default App;
