@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../Game.css'
+import '../css/Game.css';
+
 function Game(props) {
   return (
     <div>
