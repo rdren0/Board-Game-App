@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import App from '../App.js';
 import NavBar from './NavBar.js'
 import Game from './Game.js'
+import '../css/CardArea.css'
 
 class CardArea extends Component {
   constructor(props) {
