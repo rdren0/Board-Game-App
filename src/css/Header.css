@@ -1,0 +1,19 @@
+h1 {
+  color: #FFF;
+  margin: 0;
+  font-size: 50px;
+  text-align: center;
+}
+
+.title-style {
+  font-size: 100px;
+}
+
+header {
+  background-image: url(https://images.pexels.com/photos/776654/pexels-photo-776654.jpeg?cs=srgb&dl=blur-board-game-cards-776654.jpg&fm=jpg);
+  background-size: cover;
+  height: 250px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 68%;
+}

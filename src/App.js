@@ -1,30 +1,60 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './Components/Header.js';
+import NavBar from './Components/NavBar.js';
+import CardArea from './Components/CardArea.js';
+import './css/App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+  constructor() {
+    super();
+    this.state = {
+      locations: [],
+      games:[]
+    }
 
-            
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
   }
+
+  componentDidMount() {
+    fetch("https://fe-apps.herokuapp.com/api/v1/whateverly/1901/kobesparrow/boardGames")
+    .then(response => response.json())
+    .then(gamesData => this.setState({games: gamesData.boardGames}))
+    .catch(err => {
+      throw new Error(err);
+    })
+
+    fetch('https://fe-apps.herokuapp.com/api/v1/whateverly/1901/kobesparrow/localGameParlours')
+      .then(response => response.json())
+      .then(locations => {
+        this.setState({
+          locations: locations.localGameParlours
+        })
+      })
+      .catch(err => {
+        throw new Error(err);
+      })
+  }
+
+  render() {
+    let cardArea = "loading";
+    if (this.state.games.length !== 0) {
+      return (
+        <div className="App">
+          <Header header={Header}/>
+            <CardArea
+              gamesData={this.state.games}
+              locationData={this.state.locations} />
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <Header header={Header}/>
+            <CardArea cardArea={cardArea} />
+        </div>
+      )
+    }
+    }
+
 }
 
 export default App;
