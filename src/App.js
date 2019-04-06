@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       locations: [],
-      games:[]
+      games: []
     }
 
   }
@@ -18,6 +18,7 @@ class App extends Component {
     fetch("https://fe-apps.herokuapp.com/api/v1/whateverly/1901/kobesparrow/boardGames")
     .then(response => response.json())
     .then(gamesData => this.setState({games: gamesData.boardGames}))
+    // .then(this.shuffle);
     .catch(err => {
       throw new Error(err);
     })
@@ -34,25 +35,50 @@ class App extends Component {
       })
   }
 
+  shuffle() {
+    console.log('shuffle success')
+    let shuffledGames = this.state.games.sort(() => 0.5 - Math.random());
+    let splicedGames = shuffledGames.splice(0, 8);
+    console.log('splicedGames ', splicedGames)
+    this.setState({
+      games: splicedGames
+    })
+  }
+
   render() {
-    let cardArea = "loading";
-    if (this.state.games.length !== 0) {
-      return (
-        <div className="App">
-          <Header header={Header}/>
-            <CardArea
-              gamesData={this.state.games}
-              locationData={this.state.locations} />
-        </div>
-      );
-    } else {
-      return (
-        <div className="App">
-          <Header header={Header}/>
-            <CardArea cardArea={cardArea} />
-        </div>
-      )
-    }
+    let cardArea = this.state.games.length ?
+      <CardArea
+        gamesData={this.state.games}
+        locationData={this.state.locations} />
+      : 'Loading...';
+
+    return (
+      <div className="App">
+        <Header header={Header} />
+        {cardArea}
+      </div>
+    );
+
+    
+
+    // let cardArea = "loading";
+    // if (this.state.games.length !== 0) {
+    //   return (
+    //     <div className="App">
+    //       <Header header={Header}/>
+    //         <CardArea
+    //           gamesData={this.state.games}
+    //           locationData={this.state.locations} />
+    //     </div>
+    //   );
+    // } else {
+    //   return (
+    //     <div className="App">
+    //       <Header header={Header}/>
+    //         <CardArea cardArea={cardArea} />
+    //     </div>
+    //   )
+    // }
     }
 
 }

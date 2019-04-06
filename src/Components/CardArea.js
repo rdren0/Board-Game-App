@@ -7,13 +7,18 @@ import '../css/CardArea.css'
 class CardArea extends Component {
   constructor(props) {
     super(props);
-    this.state= {
-
-    }
   }
 
+  // shuffle() {
+  //   let shuffledGames = this.props.gamesData.sort(() => 0.5 - Math.random());
+  //   let splicedGames =  shuffledGames.splice(0, 8);
+  //   this.setState({
+  //     displayGames: splicedGames
+  //   })
+  // }
+  
+
   render() {
-    if (this.props.gamesData) {
     let gamesCards =
      this.props.gamesData.map((game) => {
       return <Game
@@ -36,13 +41,6 @@ class CardArea extends Component {
         </div>
       </div>
     )
-  } else {
-    return (
-      <div>
-        {this.props.cardArea}
-      </div>
-      )
-    }
   }
 }
 
