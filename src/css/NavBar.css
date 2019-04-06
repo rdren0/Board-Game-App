@@ -4,21 +4,42 @@ img {
 }
 
 li {
-  list-style: none;
+  border: solid 2px #DCE6EC;
+  border-bottom-color: #444f68;
+  border-top-color: #444f68;
   display: inline-block;
+  list-style: none;
+}
+
+li.first {
+  border-left-color: #444f68;
+}
+
+li.last {
+  border-right-color: #444f68;
 }
 
 nav {
+  background-color: #444f68;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
 }
 
 select {
-  width: 100px;
+  background-color: #DCE6EC;
+  border-radius: 40px;
+  box-shadow: 2px 2px #2eaebb;
+  color: #444f68;
   margin: 10px;
+  width: 120px;
 }
 
 button {
+  background-color: #DCE6EC;
+  border-radius: 40px;
+  box-shadow: 2px 2px #2eaebb;
+  color: #444f68;
   margin:10px;
+  width: 120px;
 }
