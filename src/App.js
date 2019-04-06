@@ -42,7 +42,8 @@ class App extends Component {
           <Header header={Header}/>
             <CardArea
               gamesData={this.state.games}
-              locationData={this.state.locations} />
+              locationData ={this.state.locations}
+             />
         </div>
       );
     } else {
