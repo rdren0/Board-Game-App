@@ -3,9 +3,9 @@ import '../css/Game.css';
 
 function Game(props) {
   return (
-    <div>
+    <div class = 'card'>
       <article>
-        <img src={props.image} />
+        <img src={props.image} class ='gameCards' />
       </article>
     </div>
   )

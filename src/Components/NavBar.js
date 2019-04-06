@@ -17,12 +17,12 @@ class NavBar extends Component {
     return (
       <nav>
         <ul>
-          <li><img src={onePlayer} alt="One Player Games"/></li>
+          <li class = 'first'><img src={onePlayer} alt="One Player Games"/></li>
           <li><img src={twoPlayers} alt="Two Player Games"/></li>
           <li><img src={threePlayers} alt="Three Player Games"/></li>
           <li><img src={fourPlayers} alt="Four Player Games"/></li>
           <li><img src={fivePlayers} alt="Five Player Games"/></li>
-          <li><img src={groupPlayers} alt="Group Player Games"/></li>
+          <li class = 'last'><img src={groupPlayers} alt="Group Player Games"/></li>
         </ul>
         <select>
           <option>Weight </option>
