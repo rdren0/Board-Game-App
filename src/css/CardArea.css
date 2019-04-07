@@ -1,6 +1,6 @@
 .cardContainer {
     background-color: #DCE6EC;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4,1fr);
     grid-column-gap: 10px;
     grid-row-gap: 15px;
