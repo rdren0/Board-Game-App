@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import '../css/Game.css';
-
+import '../css/Game.css'
 function Game(props) {
   return (
     <div class = 'card'>

@@ -8,13 +8,9 @@ import '../css/CardArea.css'
 class CardArea extends Component {
   constructor(props) {
     super(props);
-    this.state= {
-
-    }
   }
 
   render() {
-    if (this.props.locationData) {
     let gamesCards =
      this.props.gamesData.map((game) => {
       return <Game
@@ -47,19 +43,16 @@ class CardArea extends Component {
     });
     return (
       <div>
-        <NavBar NavBar={NavBar}/>
-        <section className = 'cardContainer'>
+        <NavBar
+        games={this.props.gamesData}
+        playerFilter={this.props.playerFilter}
+        weightFilter={this.props.weightFilter}
+        gameTypeFilter={this.props.gameTypeFilter} />
+        <div>
           {gamesCards}
         </section>
       </div>
     )
-  } else {
-    return (
-      <div>
-        {this.props.cardArea}
-      </div>
-      )
-    }
   }
 }
 
