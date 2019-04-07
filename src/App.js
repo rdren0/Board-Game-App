@@ -9,16 +9,26 @@ class App extends Component {
     super();
     this.state = {
       locations: [],
-      games: []
+      games: [],
+      filteredGames: []
     }
 
+    this.playerFilter = this.playerFilter.bind(this)
+  }
+
+  playerFilter(numOfPlayers) {
+    let filteredGames = this.props.games.filter(game => game.minPlayers == numOfPlayers);
+    this.setState({
+      games: filteredGames
+    })
+    console.log(this.props.games);
+    console.log('filteredGames, ', filteredGames);
   }
 
   componentDidMount() {
     fetch("https://fe-apps.herokuapp.com/api/v1/whateverly/1901/kobesparrow/boardGames")
     .then(response => response.json())
     .then(gamesData => this.setState({games: gamesData.boardGames}))
-    // .then(this.shuffle);
     .catch(err => {
       throw new Error(err);
     })
@@ -41,15 +51,44 @@ class App extends Component {
     let splicedGames = shuffledGames.splice(0, 8);
     console.log('splicedGames ', splicedGames)
     this.setState({
-      games: splicedGames
+      filteredGames: splicedGames
     })
   }
 
+  playerFilter(numOfPlayers) {
+    let filteredGames = this.state.games.filter(game => game.minPlayers === numOfPlayers);
+    this.setState({
+      filteredGames: filteredGames
+    })
+    console.log('playerFilterSuccess', numOfPlayers);
+  }
+
+  weightFilter = (e) => {
+    let weightOption = e.target.value.toLowerCase();
+    let filteredGames = this.state.games.filter(game => game.weight === weightOption);
+    this.setState({
+      filteredGames: filteredGames
+    })
+    console.log('App.js: ', weightOption)
+  }
+
+  gameTypeFilter = (e) => {
+    let typeOption = e.target.value.toLowerCase();
+    let filteredGames = this.state.games.filter(game => game.type === typeOption);
+    this.setState({
+      filteredGames: filteredGames
+    })
+    console.log(typeOption);
+  }
+ 
   render() {
     let cardArea = this.state.games.length ?
       <CardArea
-        gamesData={this.state.games}
-        locationData={this.state.locations} />
+        gamesData={this.state.filteredGames}
+        locationData={this.state.locations} 
+        playerFilter={this.playerFilter} 
+        weightFilter={this.weightFilter} 
+        gameTypeFilter={this.gameTypeFilter} />
       : 'Loading...';
 
     return (

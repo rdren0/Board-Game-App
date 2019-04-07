@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import App from './App.js';
 import '../css/NavBar.css'
 import onePlayer from '../images/One-Player.svg'
 import twoPlayers from '../images/Two-Players.svg'
@@ -8,29 +9,44 @@ import fivePlayers from '../images/Five-Players.svg'
 import groupPlayers from '../images/Group-Players.svg'
 
 class NavBar extends Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
   }
+
+  linkTest(e) {
+    console.log(e)
+    console.log('test')
+  }
+
+  // weightChange = (e) => {
+  //   console.log(e.target.value);
+  //   let weightOption = e.target.value;
+  //   let currentCards = this.props.games.filter(game => {
+  //     return game.weight.includes(weightOption);
+  //   })
+  //   this.setState({
+  //     CurrentCards
+  //   })
+  // }
 
   render() {
     return (
       <nav>
         <ul>
-          <li><img src={onePlayer} alt="One Player Games"/></li>
-          <li><img src={twoPlayers} alt="Two Player Games"/></li>
-          <li><img src={threePlayers} alt="Three Player Games"/></li>
-          <li><img src={fourPlayers} alt="Four Player Games"/></li>
-          <li><img src={fivePlayers} alt="Five Player Games"/></li>
-          <li><img src={groupPlayers} alt="Group Player Games"/></li>
+          <li><button onClick={() => this.props.playerFilter(1)}><img src={onePlayer} alt="One Player Games" /></button></li>
+          <li><button onClick={() => this.props.playerFilter(2)}><img src={twoPlayers} alt="Two Player Games"/></button></li>
+          <li><button onClick={() => this.props.playerFilter(3)}><img src={threePlayers} alt="Three Player Games" /></button></li>
+          <li><button onClick={() => this.props.playerFilter(4)}><img src={fourPlayers} alt="Four Player Games" /></button></li>
+          <li><button onClick={() => this.props.playerFilter(5)}><img src={fivePlayers} alt="Five Player Games" /></button></li>
+          <li><button onClick={() => this.props.playerFilter('lots')}><img src={groupPlayers} alt="Group Player Games" /></button></li>
         </ul>
-        <select>
+        <select onChange={this.props.weightFilter}>
           <option>Weight </option>
           <option>Light</option>
           <option>Medium</option>
           <option>Heavy</option>
         </select>
-        <select>
+        <select onChange={this.props.gameTypeFilter}>
           <option>Type</option>
           <option>Party</option>
           <option>Strategy</option>

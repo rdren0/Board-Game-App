@@ -9,15 +9,6 @@ class CardArea extends Component {
     super(props);
   }
 
-  // shuffle() {
-  //   let shuffledGames = this.props.gamesData.sort(() => 0.5 - Math.random());
-  //   let splicedGames =  shuffledGames.splice(0, 8);
-  //   this.setState({
-  //     displayGames: splicedGames
-  //   })
-  // }
-  
-
   render() {
     let gamesCards =
      this.props.gamesData.map((game) => {
@@ -35,7 +26,11 @@ class CardArea extends Component {
     });
     return (
       <div>
-        <NavBar NavBar={NavBar}/>
+        <NavBar 
+        games={this.props.gamesData} 
+        playerFilter={this.props.playerFilter} 
+        weightFilter={this.props.weightFilter}
+        gameTypeFilter={this.props.gameTypeFilter} />
         <div>
           {gamesCards}
         </div>
