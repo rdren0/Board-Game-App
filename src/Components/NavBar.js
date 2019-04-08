@@ -13,12 +13,13 @@ class NavBar extends Component {
     super(props);
   }
 
-  testClick() {
-    console.log('click')
+  testClick = (e) => {
+    console.log(e.target.id);
   }
 
   render() {
     return (
+      <div>
       <nav>
         <ul>
           <li><button onClick={() => this.props.playerFilter(1)}><img src={onePlayer} alt="One Player Games" /></button></li>
@@ -43,8 +44,18 @@ class NavBar extends Component {
           <option>Family</option>
           <option>Abstract</option>
         </select>
-        <button onClick={() => this.testClick()}>Locations</button>
+        <button id="location" onClick={this.testClick}>Locations</button>
       </nav>
+      <nav>
+        <ul>
+          <li><button onClick={() => this.props.foodFilter()}>Has Food</button></li>
+          <li><button onClick={() => this.props.drinkFilter()}>Has Drinks</button></li>
+          <li><button onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
+          <li><button onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
+        </ul>
+        <button>Games</button>
+      </nav>
+      </div>
     )
   }
 }
