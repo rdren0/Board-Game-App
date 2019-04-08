@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header.js';
-import NavBar from './Components/NavBar.js';
+// import NavBar from './Components/NavBar.js';
 import CardArea from './Components/CardArea.js';
 import './css/App.css';
 
@@ -14,15 +14,6 @@ class App extends Component {
     }
 
     this.playerFilter = this.playerFilter.bind(this)
-  }
-
-  playerFilter(numOfPlayers) {
-    let filteredGames = this.props.games.filter(game => game.minPlayers == numOfPlayers);
-    this.setState({
-      games: filteredGames
-    })
-    console.log(this.props.games);
-    console.log('filteredGames, ', filteredGames);
   }
 
   componentDidMount() {
@@ -49,7 +40,6 @@ class App extends Component {
     console.log('shuffle success')
     let shuffledGames = this.state.games.sort(() => 0.5 - Math.random());
     let splicedGames = shuffledGames.splice(0, 8);
-    console.log('splicedGames ', splicedGames)
     this.setState({
       filteredGames: splicedGames
     })
@@ -60,7 +50,6 @@ class App extends Component {
     this.setState({
       filteredGames: filteredGames
     })
-    console.log('playerFilterSuccess', numOfPlayers);
   }
 
   weightFilter = (e) => {
@@ -69,7 +58,6 @@ class App extends Component {
     this.setState({
       filteredGames: filteredGames
     })
-    console.log('App.js: ', weightOption)
   }
 
   gameTypeFilter = (e) => {
@@ -78,7 +66,6 @@ class App extends Component {
     this.setState({
       filteredGames: filteredGames
     })
-    console.log(typeOption);
   }
 
   render() {

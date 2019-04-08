@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import App from '../App.js';
+// import App from '../App.js';
 import NavBar from './NavBar.js'
 import Game from './Game.js'
-import Location from './Location.js'
+// import Location from './Location.js'
 import '../css/CardArea.css'
 
 class CardArea extends Component {
@@ -24,22 +24,22 @@ class CardArea extends Component {
       image={game.image}
       id={game.gameId}
       />
-  // let locationCards =
-  //    this.props.locationData.map((location) => {
-  //     return <Location
-  //     name={location.name}
-  //     address = {location.address}
-  //     website = {location.website}
-  //     hasFood = {location.hasFood}
-  //     hasDrinks = {location.hasDrinks}
-  //     sellsGames = {location.sellsGames}
-  //     weekdayOpen = {location.weekdayOpen}
-  //     weekdayClose = {location.weekdayClose}
-  //     weekendOpen = {location.weekendOpen}
-  //     weekendClose = {location.weekendClose}
-  //     googleMapsLink = {location.googleMapsLink}
-  //     bringYourOwnGame = {location.bringYourOwnGame}
-  //     gamesOffered = {location.gamesOffered}/>
+    // let locationCards =
+    //   this.props.locationData.map((location) => {
+    //     return <Location
+    //     name={location.name}
+    //     address = {location.address}
+    //     website = {location.website}
+    //     hasFood = {location.hasFood}
+    //     hasDrinks = {location.hasDrinks}
+    //     sellsGames = {location.sellsGames}
+    //     weekdayOpen = {location.weekdayOpen}
+    //     weekdayClose = {location.weekdayClose}
+    //     weekendOpen = {location.weekendOpen}
+    //     weekendClose = {location.weekendClose}
+    //     googleMapsLink = {location.googleMapsLink}
+    //     bringYourOwnGame = {location.bringYourOwnGame}
+    //     gamesOffered = {location.gamesOffered}/>
     });
     return (
       <div>
@@ -48,7 +48,11 @@ class CardArea extends Component {
         playerFilter={this.props.playerFilter}
         weightFilter={this.props.weightFilter}
         gameTypeFilter={this.props.gameTypeFilter} />
-        <section>
+
+        <section className="cardContainer">
+
+
+
           {gamesCards}
         </section>
       </div>
