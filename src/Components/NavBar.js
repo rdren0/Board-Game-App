@@ -13,12 +13,10 @@ class NavBar extends Component {
     super(props);
   }
 
-  testClick = (e) => {
-    console.log(e.target.id);
-  }
-
   render() {
-    return (
+    console.log(this.props.status)
+    if(this.props.status === "Games"){
+      return (
       <div>
       <nav>
         <ul>
@@ -44,8 +42,13 @@ class NavBar extends Component {
           <option>Family</option>
           <option>Abstract</option>
         </select>
-        <button id="location" onClick={this.testClick}>Locations</button>
+        <button id="location" onClick={this.props.changeCards}>Locations</button>
       </nav>
+      </div>
+      )
+    }else{
+      return (
+        <div>
       <nav>
         <ul>
           <li><button onClick={() => this.props.foodFilter()}>Has Food</button></li>
@@ -53,10 +56,12 @@ class NavBar extends Component {
           <li><button onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
           <li><button onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
         </ul>
-        <button>Games</button>
+        <button onClick={this.props.changeCards}>Games</button>
       </nav>
       </div>
     )
+
+    }
   }
 }
 
