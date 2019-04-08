@@ -51,6 +51,7 @@ class CardArea extends Component {
         games={this.props.gamesData}
         playerFilter={this.props.playerFilter}
         weightFilter={this.props.weightFilter}
+<<<<<<< HEAD
         gameTypeFilter={this.props.gameTypeFilter} 
         foodFilter={ this.props.foodFilter } 
         drinkFilter={this.props.drinkFilter } 
@@ -59,6 +60,11 @@ class CardArea extends Component {
 
         <section className="cardContainer">
           {locationCards}
+=======
+        gameTypeFilter={this.props.gameTypeFilter} />
+        <section className="cardContainer">
+
+>>>>>>> origin/sass
           {gamesCards}
         </section>
       </div>
