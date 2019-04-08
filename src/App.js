@@ -18,11 +18,14 @@ class App extends Component {
     }
 
     this.playerFilter = this.playerFilter.bind(this);
+    this.weightFilter = this.weightFilter.bind(this);
+    this.gameTypeFilter = this.gameTypeFilter.bind(this)
     this.foodFilter = this.foodFilter.bind(this);
     this.drinkFilter = this.drinkFilter.bind(this);
     this.sellerFilter = this.sellerFilter.bind(this);
     this.bringGameFilter = this.bringGameFilter.bind(this);
-    this.filterCards = this.filterCards.bind(this);
+    this.filterFilteredCards = this.filterFilteredCards.bind(this);
+    this.filterAllCards = this.filterAllCards.bind(this);
 
   }
 
@@ -47,7 +50,6 @@ class App extends Component {
   }
 
   shuffle() {
-    console.log('shuffle success')
     let shuffledGames = this.state.games.sort(() => 0.5 - Math.random());
     let splicedGames = shuffledGames.splice(0, 8);
     this.setState({
@@ -55,25 +57,50 @@ class App extends Component {
     });
   }
 
-  filterCards() {
-    let counter = 0;
-    let filterGames = this.state.games.filter( game =>{
-      if(this.state.players){
-        return game.players === this.state.players
-      }else{
-        return game;}}).filter( game =>{
-      if(this.state.weight){
-        return game.weight === this.state.weight
-      }else{
-        return game;}}).filter( game =>{
-      if(this.state.gameType){
-        return game.gameType === this.state.gameType
-      }else{
-        return game;}}); 
-    this.setState({
-      filteredGames: filterGames
-    });
 
+
+  filterAllCards(value, property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game[value] === property; 
+    });
+    if(filterGames.length === 0){
+      this.setState({filterGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+
+    }
+  }
+
+  filterAllCardsPlayers(property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game.minPlayers <= property && game.maxPlayers >= property; 
+    });
+    if(filterGames.length === 0){
+      this.setState({filterGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+      
+    }
+  }
+  filterFilteredCards(value, property) {
+    let counter = 0;
+    let filterGames = this.state.filteredGames.filter(game =>{
+      return game[value] === property; 
+    })
+    if(filterGames.length === 0){
+      this.setState({filterGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+      
+    }
   }
 
   playerFilter(numOfPlayers) {
@@ -81,28 +108,39 @@ class App extends Component {
     this.setState({
       players: playerInput
     });
-    this.filterCards()
+  if(this.filteredGames !== undefined){
+    this.filterFilteredCardsPlayers(playerInput)
+  }else{
+    this.filterAllCardsPlayers(playerInput)
   }
+}
 
-  weightFilter = (e) => {
-    console.log(e);
-    let weightInput = e.target.value.toUpperCase();
+  weightFilter(e){
+    let weightInput = e.target.value.toLowerCase();
     this.setState({
       weight: weightInput
     });
-    this.filterCards()
+    if(this.filteredGames !== undefined){
+    this.filterFilteredCards("weight",this.state.weight)
+  }else{
+    this.filterAllCards("weight", this.state.weight)
   }
+}
 
-  gameTypeFilter = (e) => {
-        console.log(e);
 
-    let gameTypeInput = e.target.value.toUpperCase();
+  gameTypeFilter(e){
+    console.log("4:", this.filteredGames);
+    let gameTypeInput = e.target.value.toLowerCase();
     this.setState({
       gameType: gameTypeInput
     });
-    this.filterCards()
-
+     if(this.filteredGames !== undefined){
+    this.filterFilteredCards("gameType",this.state.gameType)
+  }else{
+    this.filterAllCards("gameType",this.state.gameType)
   }
+}
+
 
   foodFilter() {
     let filteredLocations = this.state.locations.filter(location => location.hasFood === true);
