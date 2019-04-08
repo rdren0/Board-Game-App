@@ -10,6 +10,9 @@ class App extends Component {
     this.state = {
       locations: [],
       games: [],
+      weight: null,
+      players: null,
+      gameType: null,
       filteredGames: [],
       filteredLocations: []
     }
@@ -50,27 +53,37 @@ class App extends Component {
     });
   }
 
-  playerFilter(numOfPlayers) {
-    let filteredGames = this.state.games.filter(game => game.minPlayers === numOfPlayers);
+  filterCards = (e) =>{
+    let filteredGames = this.state.games.filter(game => game.weight === this.state.weight);
     this.setState({
       filteredGames: filteredGames
     });
+
   }
 
-  weightFilter = (e) => {
-    let weightOption = e.target.value.toLowerCase();
-    let filteredGames = this.state.games.filter(game => game.weight === weightOption);
+  playerFilter(numOfPlayers) {
+    let playerInput = e.target.value;
     this.setState({
-      filteredGames: filteredGames
+      players: playerInput.toUpperCase()
+    })
+    this.filterCards()
+  }
+
+  updateWeight = e => {
+    let weightInput = e.target.value;
+    this.setState({
+      weight: weightInput.toUpperCase()
     });
+    this.filterCards()
   }
 
   gameTypeFilter = (e) => {
-    let typeOption = e.target.value.toLowerCase();
-    let filteredGames = this.state.games.filter(game => game.type === typeOption);
+    let gameTypeInput = e.target.value;
     this.setState({
-      filteredGames: filteredGames
+      gameType: gameTypeInput.toUpperCase();
     });
+    this.filterCards()
+
   }
 
   foodFilter() {
