@@ -26,26 +26,6 @@ class CardArea extends Component {
         />
       });
 
-    let locationCards =
-      this.props.locationData.map((location) => {
-        return <Location
-        name={location.name}
-        address = {location.address}
-        website = {location.website}
-        hasFood = {location.hasFood}
-        logo = {location.logo}
-        hasDrinks = {location.hasDrinks}
-        sellsGames = {location.sellsGames}
-        weekdayOpen = {location.weekdayOpen}
-        weekdayClose = {location.weekdayClose}
-        weekendOpen = {location.weekendOpen}
-        weekendClose = {location.weekendClose}
-        googleMapsLink = {location.googleMapsLink}
-        bringYourOwnGame = {location.bringYourOwnGame}
-        gamesOffered = {location.gamesOffered}/>
-      });
-
-
     return (
       <div>
         <NavBar
@@ -59,7 +39,6 @@ class CardArea extends Component {
         bringGameFilter={ this.props.bringGameFilter } />
 
         <section className="cardContainer">
-          {locationCards}
           {gamesCards}
         </section>
       </div>

@@ -53,8 +53,17 @@ class App extends Component {
     });
   }
 
-  filterCards = (e) =>{
-    let filteredGames = this.state.games.filter(game => game.weight === this.state.weight);
+  filterCards() {
+    let filteredGames = this.state.games.filter( game =>{
+      if(this.state.players !== null){
+        return game.players === this.state.players
+      }}).filter( game =>{
+      if(this.state.weight !== null){
+        return game.weight === this.state.weight
+      }}).filter( game =>{
+      if(this.state.gameType !== null){
+        return game.gameType === this.state.gameType
+      }}); 
     this.setState({
       filteredGames: filteredGames
     });
@@ -62,7 +71,7 @@ class App extends Component {
   }
 
   playerFilter(numOfPlayers) {
-    let playerInput = numOfPlayers.toUpperCase();
+    let playerInput = numOfPlayers;
     this.setState({
       players: playerInput
     });
