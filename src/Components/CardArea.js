@@ -57,9 +57,8 @@ class CardArea extends Component {
         drinkFilter={this.props.drinkFilter }
         sellerFilter={ this.props.sellerFilter }
         bringGameFilter={ this.props.bringGameFilter } />
-
         <section className="cardContainer">
-          {gamesCards}
+        {gamesCards}
         </section>
       </div>
     )
