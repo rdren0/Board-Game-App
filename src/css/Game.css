@@ -1,7 +1,32 @@
-article {
-    margin: 0px;
-    width: 25%;
+.gameCard {
+  height: 200px;
+  margin: 0px;
+  width: 25%;
 }
-img.gameCards {
-    height: 150px;
+
+img.gameCardImage {
+  opacity: 1;
+  transition: .5s ease;
+  height: 150px;
+}
+
+.additionalGameInfo {
+  transition: .5s ease;
+  width: 150px;
+  opacity: 0;
+  transform: translate(-0%, -125%);
+}
+
+.gameCard:hover .gameCardImage {
+  opacity: 0.3;
+}
+
+.gameCard:hover .additionalGameInfo {
+  opacity: 1;
+}
+
+.text {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 16px;
 }
