@@ -13,9 +13,12 @@ function Game(props) {
           <p className="text">Type: {props.type}</p>
           <p className="text">Favorite</p>
         </div>
+        <div className="cardDetails" style="display:none">
+          <img src={props.image} />
+
+        </div>
     </div>
   )
-
 }
 
 export default Game;
