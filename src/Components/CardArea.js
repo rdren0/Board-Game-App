@@ -4,8 +4,7 @@ import NavBar from './NavBar.js'
 import Game from './Game.js'
 import Location from './Location.js'
 import '../scss/CardArea.scss'
-import like from '../images/Like.svg'
-import unlike from '../images/Unlike.svg'
+
 
 class CardArea extends Component {
   constructor(props) {
@@ -25,8 +24,6 @@ class CardArea extends Component {
         features={game.features}
         image={game.image}
         id={game.gameId}
-        like={like}
-        unlike={unlike}
         />
       });
 
@@ -47,8 +44,6 @@ class CardArea extends Component {
         googleMapsLink = {location.googleMapsLink}
         bringYourOwnGame = {location.bringYourOwnGame}
         gamesOffered = {location.gamesOffered}
-        like={like}
-        unlike={unlike}
         />
 
       });

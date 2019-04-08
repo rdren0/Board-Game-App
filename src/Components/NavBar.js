@@ -17,6 +17,7 @@ class NavBar extends Component {
     console.log(e.target.id);
   }
 
+
   render() {
     return (
       <div>
