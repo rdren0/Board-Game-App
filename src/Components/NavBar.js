@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import App from './App.js';
-import '../css/NavBar.css'
+import '../scss/NavBar.scss'
 import onePlayer from '../images/One-Player.svg'
 import twoPlayers from '../images/Two-Players.svg'
 import threePlayers from '../images/Three-Players.svg'
