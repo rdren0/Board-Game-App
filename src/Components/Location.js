@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/Location.css';
+import '../scss/Location.scss';
 
 
 function Location(props) {

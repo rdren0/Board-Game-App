@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import NavBar from './NavBar.js'
 import Game from './Game.js'
 import Location from './Location.js'
-import '../css/CardArea.css'
+import '../scss/CardArea.scss'
 
 class CardArea extends Component {
   constructor(props) {
