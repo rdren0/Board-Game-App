@@ -24,7 +24,7 @@ class CardArea extends Component {
         image={game.image}
         id={game.gameId}
         />
-      });  
+      });
 
     let locationCards =
       this.props.locationData.map((location) => {
@@ -51,20 +51,14 @@ class CardArea extends Component {
         games={this.props.gamesData}
         playerFilter={this.props.playerFilter}
         weightFilter={this.props.weightFilter}
-<<<<<<< HEAD
-        gameTypeFilter={this.props.gameTypeFilter} 
-        foodFilter={ this.props.foodFilter } 
-        drinkFilter={this.props.drinkFilter } 
-        sellerFilter={ this.props.sellerFilter } 
+        gameTypeFilter={this.props.gameTypeFilter}
+        foodFilter={ this.props.foodFilter }
+        drinkFilter={this.props.drinkFilter }
+        sellerFilter={ this.props.sellerFilter }
         bringGameFilter={ this.props.bringGameFilter } />
 
         <section className="cardContainer">
           {locationCards}
-=======
-        gameTypeFilter={this.props.gameTypeFilter} />
-        <section className="cardContainer">
-
->>>>>>> origin/sass
           {gamesCards}
         </section>
       </div>
