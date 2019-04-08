@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/Game.css'
+import '../scss/Game.scss'
 
 function Game(props) {
   // console.log(props)
