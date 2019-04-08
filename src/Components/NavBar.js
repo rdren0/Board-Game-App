@@ -13,21 +13,9 @@ class NavBar extends Component {
     super(props);
   }
 
-  linkTest(e) {
-    console.log(e)
-    console.log('test')
+  testClick() {
+    console.log('click')
   }
-
-  // weightChange = (e) => {
-  //   console.log(e.target.value);
-  //   let weightOption = e.target.value;
-  //   let currentCards = this.props.games.filter(game => {
-  //     return game.weight.includes(weightOption);
-  //   })
-  //   this.setState({
-  //     CurrentCards
-  //   })
-  // }
 
   render() {
     return (
@@ -55,7 +43,7 @@ class NavBar extends Component {
           <option>Family</option>
           <option>Abstract</option>
         </select>
-        <button>Locations</button>
+        <button onClick={() => this.testClick()}>Locations</button>
       </nav>
     )
   }
