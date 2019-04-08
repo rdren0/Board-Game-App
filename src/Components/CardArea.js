@@ -48,7 +48,7 @@ class CardArea extends Component {
         playerFilter={this.props.playerFilter}
         weightFilter={this.props.weightFilter}
         gameTypeFilter={this.props.gameTypeFilter} />
-        <section>
+        <section class="cardContainer">
           {gamesCards}
         </section>
       </div>
