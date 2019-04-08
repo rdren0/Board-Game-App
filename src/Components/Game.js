@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import '../scss/Game.scss'
 
 function Game(props) {
-  // console.log(props)
   return (
     <div className='gameCard' id={props.id}>
         <img src={props.image} className='gameCardImage' />
