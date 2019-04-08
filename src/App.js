@@ -62,25 +62,25 @@ class App extends Component {
   }
 
   playerFilter(numOfPlayers) {
-    let playerInput = e.target.value;
+    let playerInput = numOfPlayers;
     this.setState({
-      players: playerInput.toUpperCase()
+      players: playerInput
     })
     this.filterCards()
   }
 
   updateWeight = e => {
-    let weightInput = e.target.value;
+    let weightInput = e.target.value.toUpperCase();
     this.setState({
-      weight: weightInput.toUpperCase()
+      weight: weightInput
     });
     this.filterCards()
   }
 
   gameTypeFilter = (e) => {
-    let gameTypeInput = e.target.value;
+    let gameTypeInput = e.target.value.toUpperCase();
     this.setState({
-      gameType: gameTypeInput.toUpperCase();
+      gameType: gameTypeInput
     });
     this.filterCards()
 

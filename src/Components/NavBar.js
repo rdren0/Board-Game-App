@@ -29,7 +29,7 @@ class NavBar extends Component {
           <li><button onClick={() => this.props.playerFilter(5)}><img src={fivePlayers} alt="Five Player Games" /></button></li>
           <li><button onClick={() => this.props.playerFilter('lots')}><img src={groupPlayers} alt="Group Player Games" /></button></li>
         </ul>
-        <select onChange={this.props.weightFilter}>
+        <select onChange={this.props.updateWeight}>
           <option>Weight </option>
           <option>Light</option>
           <option>Medium</option>
