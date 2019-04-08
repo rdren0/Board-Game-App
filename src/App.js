@@ -112,11 +112,11 @@ class App extends Component {
         locationData={this.state.filteredLocations}
         playerFilter={this.playerFilter}
         weightFilter={this.weightFilter}
-        gameTypeFilter={this.gameTypeFilter} 
-        foodFilter={ this.foodFilter } 
-        drinkFilter={ this.drinkFilter } 
+        gameTypeFilter={this.gameTypeFilter}
+        foodFilter={ this.foodFilter }
+        drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
-        bringGameFilter={ this.bringGameFilter } />
+        bringGameFilter={ this.bringGameFilter} />
       : 'Loading...';
 
     return (

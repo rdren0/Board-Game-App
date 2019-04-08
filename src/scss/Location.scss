@@ -1,14 +1,31 @@
 .locationCard {
-  border: 1px solid gainsboro;
-  border-radius: 15px;
-  margin: 10px;
-  height: 130px;
   display: flex;
+  flex-flow: column wrap;
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 100px;
+  height: 130px;
 }
 
 .locationLogo {
-  display: block;
+  display: inline;
   border: 3px solid #000000;
   height: 75px;
   width: 75px;
+}
+
+.like-btn {
+  margin: 6px;
+  justify-content: flex-start;
+}
+.locationInfo {
+  margin: 0px;
+  display: inline;
+}
+
+p {
+  font-size: 16px;
+  flex-flow: wrap;
+  margin-left: 0;
+  margin-right: 20px;
 }

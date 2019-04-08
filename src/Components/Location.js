@@ -7,9 +7,10 @@ function Location(props) {
     <div>
       <article className="locationCard">
         <img src={props.logo} className="locationLogo" />
+        <img src={props.unlike} className="like-btn"></img>
         <div className="locationInfo">
           <h3>{props.name}</h3>
-          <h4>{ props.address }</h4>
+          <p>{ props.address }</p>
         </div>
       </article>
     </div>
