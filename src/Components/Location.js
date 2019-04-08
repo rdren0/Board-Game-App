@@ -6,7 +6,7 @@ function Location(props) {
   return(
     <div>
       <article className="locationCard">
-        <img src={props.image} className="locationLogo" />
+        <img src={props.logo} className="locationLogo" />
         <div className="locationInfo">
           <h3>{props.name}</h3>
           <h4>{ props.address }</h4>
