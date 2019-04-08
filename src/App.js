@@ -69,7 +69,7 @@ class App extends Component {
     this.filterCards()
   }
 
-  updateWeight = e => {
+  updateWeight = (e) => {
     let weightInput = e.target.value.toUpperCase();
     this.setState({
       weight: weightInput
