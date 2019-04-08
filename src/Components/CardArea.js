@@ -33,6 +33,7 @@ class CardArea extends Component {
         address = {location.address}
         website = {location.website}
         hasFood = {location.hasFood}
+        logo = {location.logo}
         hasDrinks = {location.hasDrinks}
         sellsGames = {location.sellsGames}
         weekdayOpen = {location.weekdayOpen}
