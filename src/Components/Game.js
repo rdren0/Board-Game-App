@@ -12,9 +12,12 @@ function Game(props) {
           <p className="text">Weight: {props.weight}</p>
           <p className="text">Type: {props.type}</p>
         </div>
+        <div className="cardDetails" style="display:none">
+          <img src={props.image} />
+
+        </div>
     </div>
   )
-
 }
 
 export default Game;
