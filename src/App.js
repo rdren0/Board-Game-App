@@ -22,6 +22,8 @@ class App extends Component {
     this.drinkFilter = this.drinkFilter.bind(this);
     this.sellerFilter = this.sellerFilter.bind(this);
     this.bringGameFilter = this.bringGameFilter.bind(this);
+    this.filterCards = this.filterCards.bind(this);
+
   }
 
   componentDidMount() {
@@ -54,18 +56,22 @@ class App extends Component {
   }
 
   filterCards() {
-    let filteredGames = this.state.games.filter( game =>{
-      if(this.state.players !== null){
+    let counter = 0;
+    let filterGames = this.state.games.filter( game =>{
+      if(this.state.players){
         return game.players === this.state.players
-      }}).filter( game =>{
-      if(this.state.weight !== null){
+      }else{
+        return game;}}).filter( game =>{
+      if(this.state.weight){
         return game.weight === this.state.weight
-      }}).filter( game =>{
-      if(this.state.gameType !== null){
+      }else{
+        return game;}}).filter( game =>{
+      if(this.state.gameType){
         return game.gameType === this.state.gameType
-      }}); 
+      }else{
+        return game;}}); 
     this.setState({
-      filteredGames: filteredGames
+      filteredGames: filterGames
     });
 
   }

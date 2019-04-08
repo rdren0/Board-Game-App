@@ -59,7 +59,7 @@ class CardArea extends Component {
         bringGameFilter={ this.props.bringGameFilter } />
 
         <section className="cardContainer">
-          {gamesCards}
+          {locationCards}
         </section>
       </div>
     )
