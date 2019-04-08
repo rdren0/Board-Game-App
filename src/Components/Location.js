@@ -12,6 +12,7 @@ function Location(props) {
       <article className="locationCard">
         <img src={props.logo} className="locationLogo" />
         <LikeButton
+          
           like={like}
           unlike={unlike} />
         <div className="locationInfo">

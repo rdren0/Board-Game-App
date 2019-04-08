@@ -4,13 +4,20 @@ import '../scss/LikeButton.scss';
 class LikeButton extends Component {
   constructor(props) {
     super(props);
+    this.state = {isItemLiked: true}
+    this.handleLike = this.handleLike.bind(this);
+  }
 
+  handleLike() {
+    this.setState(state => ({
+      isItemLiked: !state.isItemLiked
+    }))
   }
 
   render() {
     return(
       <div>
-        <img src={this.props.unlike} className="like-btn"></img>
+        <img onClick={this.handleLike} src={this.state.isItemLiked ? this.props.unlike : this.props.like} className="like-btn"></img>
       </div>
     );
   }
