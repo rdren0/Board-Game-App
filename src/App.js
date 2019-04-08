@@ -11,9 +11,11 @@ class App extends Component {
       locations: [],
       games: [],
       filteredGames: [],
-      filteredLocations: []
+      filteredLocations: [],
+      favorites: []
     }
 
+    console.log( 'App ', this.state.favorites);
     this.playerFilter = this.playerFilter.bind(this);
     this.foodFilter = this.foodFilter.bind(this);
     this.drinkFilter = this.drinkFilter.bind(this);
@@ -38,6 +40,11 @@ class App extends Component {
       })
       .catch(err => {
         throw new Error(err);
+      })
+
+      let favorites = JSON.parse(localStorage.getItem('favorite') || []);
+      this.setState({
+        favorites: favorites
       })
   }
 
@@ -116,7 +123,8 @@ class App extends Component {
         foodFilter={ this.foodFilter }
         drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
-        bringGameFilter={ this.bringGameFilter} />
+        bringGameFilter={ this.bringGameFilter}
+        favorites= { this.state.favorites}/>
       : 'Loading...';
 
     return (

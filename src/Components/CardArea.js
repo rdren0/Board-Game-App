@@ -9,8 +9,9 @@ import '../scss/CardArea.scss'
 class CardArea extends Component {
   constructor(props) {
     super(props);
+    console.log( "Card Area", this.props.favorites);
+    
   }
-
   render() {
     let gamesCards =
       this.props.gamesData.map((game) => {
@@ -44,6 +45,7 @@ class CardArea extends Component {
         googleMapsLink = {location.googleMapsLink}
         bringYourOwnGame = {location.bringYourOwnGame}
         gamesOffered = {location.gamesOffered}
+        favorites={this.props.favorites}
         />
 
       });
