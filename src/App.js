@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Components/Header.js';
 import NavBar from './Components/NavBar.js';
 import CardArea from './Components/CardArea.js';
-import './css/App.css';
+import './scss/App.scss';
 
 class App extends Component {
   constructor() {
