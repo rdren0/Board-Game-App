@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import App from './App.js';
+import App from '../App.js';
 import '../scss/NavBar.scss'
 import onePlayer from '../images/One-Player.svg'
 import twoPlayers from '../images/Two-Players.svg'
@@ -7,6 +7,7 @@ import threePlayers from '../images/Three-Players.svg'
 import fourPlayers from '../images/Four-Players.svg'
 import fivePlayers from '../images/Five-Players.svg'
 import groupPlayers from '../images/Group-Players.svg'
+import search from '../images/Search.svg';
 
 class NavBar extends Component {
   constructor(props) {
@@ -57,6 +58,10 @@ class NavBar extends Component {
           <li><button onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
           <li><button onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
         </ul>
+        <section>
+          <input type="text" placeholder="Search by Location" onChange={this.props.searchLowerCase}/>
+          <button onClick={this.props.searchByText}><img src={search}/></button>
+        </section>
         <button onClick={this.props.changeCards}>Games</button>
       </nav>
       </div>

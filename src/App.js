@@ -14,7 +14,8 @@ class App extends Component {
       players: null,
       gameType: null,
       filteredGames: [],
-      filteredLocations: []
+      filteredLocations: [],
+      searchInput: ''
     }
 
     this.playerFilter = this.playerFilter.bind(this);
@@ -26,6 +27,8 @@ class App extends Component {
     this.bringGameFilter = this.bringGameFilter.bind(this);
     this.filterFilteredCards = this.filterFilteredCards.bind(this);
     this.filterAllCards = this.filterAllCards.bind(this);
+    this.searchByText = this.searchByText.bind(this);
+    this.searchLowerCase = this.searchLowerCase.bind(this)
 
   }
 
@@ -57,6 +60,25 @@ class App extends Component {
     });
   }
 
+  searchByText(e) {
+    console.log('e', e.target.value);
+    let locationByText = this.state.locations.filter(location => {
+      return location.name.includes(this.state.searchInput)
+    })
+    console.log("this.state.searchInput", this.state.searchInput);
+    this.setState({
+      filteredLocations: locationByText
+    })
+  }
+
+  searchLowerCase(e) {
+    let search = e.target.value
+    console.log("e", e);
+    this.setState({
+      searchInput: search
+    })
+  }
+
   filterAllCards(value, property) {
     let counter = 0;
     let filterGames = this.state.games.filter(game =>{
@@ -68,7 +90,6 @@ class App extends Component {
       this.setState({
         filteredGames: filterGames
       });
-
     }
   }
 
@@ -184,7 +205,8 @@ class App extends Component {
         drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
         bringGameFilter={ this.bringGameFilter}
-        favorites= { this.state.favorites}/>
+        favorites= { this.state.favorites}
+        searchByText={this.searchByText}/>
       : 'Loading...';
 
     return (

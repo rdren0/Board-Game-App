@@ -48,10 +48,10 @@ class CardArea extends Component {
   })
 }
 
-saveToStorage() {
-  localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
-  console.log("save to Storage method", this.state.favorites);
-}
+  saveToStorage() {
+    localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
+  }
+
   render() {
     if(this.state.view === "Games"){
        let gamesCards =
@@ -90,7 +90,6 @@ saveToStorage() {
     let locationCards =
       this.props.locationData.map((location) => {
         let liked;
-        console.log("this.state",this.state.favorites);
         if (this.state.favorites.includes(location.name)) {
           liked = true;
         } else {
@@ -113,6 +112,7 @@ saveToStorage() {
         gamesOffered = {location.gamesOffered}
         isFavorite={liked}
         toggleFav={this.toggleFav}
+
         />
       });
         return (
@@ -127,7 +127,8 @@ saveToStorage() {
             foodFilter={ this.props.foodFilter }
             drinkFilter={this.props.drinkFilter }
             sellerFilter={ this.props.sellerFilter }
-            bringGameFilter={ this.props.bringGameFilter } />
+            bringGameFilter={ this.props.bringGameFilter }
+            searchByText={this.props.searchByText} />
             <section className="cardContainer">
             {locationCards}
             </section>

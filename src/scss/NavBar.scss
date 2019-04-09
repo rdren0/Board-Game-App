@@ -43,3 +43,19 @@ button {
   margin:10px;
   width: 120px;
 }
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 2px;
+  margin:15px auto;
+}
+
+input {
+  align-self: center;
+  height: 100%;
+  width: 200px;
+  border-style: none;
+  padding-left: 6px;
+}
