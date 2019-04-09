@@ -8,10 +8,28 @@ import '../scss/CardArea.scss'
 class CardArea extends Component {
   constructor(props) {
     super(props);
+    this.state ={
+      view: "hello"
+    }
+    this.changeCards = this.changeCards.bind(this);
+  }
+
+  changeCards(e){
+    console.log(e.target.innerText);
+    if(e.target.innerText === "Locations"){
+      this.setState({view: "Locations"}, function(){
+      console.log(this.state);
+    });
+    }else{
+      this.setState({view: "Games"}, function(){
+      console.log(this.state);
+    });
+    }
   }
 
   render() {
-    let gamesCards =
+    if(this.state.view === "Games"){
+       let gamesCards =
       this.props.gamesData.map((game) => {
         return <Game
         name={game.name}
@@ -25,7 +43,25 @@ class CardArea extends Component {
         id={game.gameId}
         />
       });
-
+          return (
+            <div>
+              <NavBar
+              status = {this.state.view}
+              changeCards = {this.changeCards}
+              games={this.props.gamesData}
+              playerFilter={this.props.playerFilter}
+              weightFilter={this.props.weightFilter}
+              gameTypeFilter={this.props.gameTypeFilter}
+              foodFilter={ this.props.foodFilter }
+              drinkFilter={this.props.drinkFilter }
+              sellerFilter={ this.props.sellerFilter }
+              bringGameFilter={ this.props.bringGameFilter } />
+              <section className="cardContainer">
+              {gamesCards}
+              </section>
+            </div>
+          )
+    }else{
     let locationCards =
       this.props.locationData.map((location) => {
         return <Location
@@ -44,26 +80,25 @@ class CardArea extends Component {
         bringYourOwnGame = {location.bringYourOwnGame}
         gamesOffered = {location.gamesOffered}/>
       });
-
-
-    return (
-      <div>
-        <NavBar
-        games={this.props.gamesData}
-        playerFilter={this.props.playerFilter}
-        weightFilter={this.props.weightFilter}
-        gameTypeFilter={this.props.gameTypeFilter}
-        foodFilter={ this.props.foodFilter }
-        drinkFilter={this.props.drinkFilter }
-        sellerFilter={ this.props.sellerFilter }
-        bringGameFilter={ this.props.bringGameFilter } />
-
-        <section className="cardContainer">
-          {locationCards}
-          {gamesCards}
-        </section>
-      </div>
-    )
+        return (
+          <div>
+            <NavBar
+            status = {this.state.view}
+            changeCards = {this.changeCards}
+            games={this.props.gamesData}
+            playerFilter={this.props.playerFilter}
+            weightFilter={this.props.weightFilter}
+            gameTypeFilter={this.props.gameTypeFilter}
+            foodFilter={ this.props.foodFilter }
+            drinkFilter={this.props.drinkFilter }
+            sellerFilter={ this.props.sellerFilter }
+            bringGameFilter={ this.props.bringGameFilter } />
+            <section className="cardContainer">
+            {locationCards}
+            </section>
+          </div>
+          )
+    }
   }
 }
 
