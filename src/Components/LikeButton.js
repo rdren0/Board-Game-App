@@ -13,13 +13,12 @@ class LikeButton extends Component {
   }
 
   handleLike(e) {
-    this.setState(state => ({
-      isItemLiked: !state.isItemLiked
-    }));
     const articleEl = e.target.closest('article');
     const title = articleEl.getAttribute('value');
-    this.favoritesStorage.push(title);
-    this.deleteFromStorage(title);
+    this.alterStorage(title);
+      this.setState(state => ({
+      isItemLiked: !state.isItemLiked
+    }));
   }
 
   saveToStorage() {
@@ -27,12 +26,20 @@ class LikeButton extends Component {
     console.log("save to Storage method", this.favoritesStorage);
   }
 
-  deleteFromStorage(title) {
+  alterStorage(title) {
+    console.log(title)
     const index = this.favoritesStorage.indexOf(title);
-    this.state.isItemLiked ? this.favoritesStorage.splice(index, 1) : this.saveToStorage();
-    console.log("after splice", this.favoritesStorage, index);
-    }
 
+    if(this.state.isItemLiked){
+      this.favoritesStorage.splice(index, 1);
+      this.saveToStorage();
+    }else{
+      this.favoritesStorage.push(title);
+      this.saveToStorage();
+      console.log("after splice", this.favoritesStorage, index)
+    }
+  }
+    
   render() {
     return(
       <div>
