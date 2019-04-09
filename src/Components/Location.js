@@ -8,7 +8,7 @@ import unlike from '../images/Unlike.svg'
 
 function Location(props) {
   return(
-    <div>
+    <div className="location-wrapper">
       <article className="locationCard" value={props.name}>
         <img src={props.logo} className="locationLogo" />
         <LikeButton

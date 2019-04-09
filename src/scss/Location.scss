@@ -18,6 +18,7 @@
   margin: 6px;
   justify-content: flex-start;
 }
+
 .locationInfo {
   margin: 0px;
   display: inline;
@@ -28,4 +29,9 @@ p {
   flex-flow: wrap;
   margin-left: 0;
   margin-right: 20px;
+}
+
+.location-wrapper {
+  border: 2px solid gainsboro;
+  border-radius: 15px;
 }

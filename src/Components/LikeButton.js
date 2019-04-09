@@ -29,7 +29,8 @@ class LikeButton extends Component {
 
   deleteFromStorage(title) {
     const index = this.favoritesStorage.indexOf(title);
-    this.state.isItemLiked ? this.favoritesStorage.splice(index, 1) : this.saveToStorage()
+    this.state.isItemLiked ? this.favoritesStorage.splice(index, 1) : this.saveToStorage();
+    console.log("after splice", this.favoritesStorage, index);
     }
 
   render() {
@@ -43,5 +44,4 @@ class LikeButton extends Component {
     );
   }
 }
-
 export default LikeButton;
