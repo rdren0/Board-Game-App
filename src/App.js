@@ -17,7 +17,7 @@ class App extends Component {
       filteredLocations: [],
       favorites: []
     }
-    
+
     this.playerFilter = this.playerFilter.bind(this);
     this.weightFilter = this.weightFilter.bind(this);
     this.gameTypeFilter = this.gameTypeFilter.bind(this)
@@ -68,7 +68,7 @@ class App extends Component {
   filterAllCards(value, property) {
     let counter = 0;
     let filterGames = this.state.games.filter(game =>{
-      return game[value] === property; 
+      return game[value] === property;
     });
     if(filterGames.length === 0){
       this.setState({filterGames: null})
@@ -83,7 +83,7 @@ class App extends Component {
   filterAllCardsPlayers(property) {
     let counter = 0;
     let filterGames = this.state.games.filter(game =>{
-      return game.minPlayers <= property && game.maxPlayers >= property; 
+      return game.minPlayers <= property && game.maxPlayers >= property;
     });
     if(filterGames.length === 0){
       this.setState({filterGames: null})
@@ -91,13 +91,13 @@ class App extends Component {
       this.setState({
         filteredGames: filterGames
       });
-      
+
     }
   }
   filterFilteredCards(value, property) {
     let counter = 0;
     let filterGames = this.state.filteredGames.filter(game =>{
-      return game[value] === property; 
+      return game[value] === property;
     })
     if(filterGames.length === 0){
       this.setState({filterGames: null})
@@ -105,7 +105,7 @@ class App extends Component {
       this.setState({
         filteredGames: filterGames
       });
-      
+
     }
   }
 

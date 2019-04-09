@@ -7,7 +7,7 @@ class LikeButton extends Component {
     this.state = {
       isItemLiked: false
     }
-    this.favoritesStorage = this.props.favorites
+    this.favoritesStorage = this.props.favorites;
     console.log("like button",this.favoritesStorage);
     this.handleLike = this.handleLike.bind(this);
   }
@@ -33,13 +33,15 @@ class LikeButton extends Component {
     if(this.state.isItemLiked){
       this.favoritesStorage.splice(index, 1);
       this.saveToStorage();
-    }else{
+    }else if(index === -1) {
       this.favoritesStorage.push(title);
+    } else {
       this.saveToStorage();
-      console.log("after splice", this.favoritesStorage, index)
     }
+      console.log("after splice", this.favoritesStorage, index)
+
   }
-    
+
   render() {
     return(
       <div>
