@@ -9,8 +9,7 @@ import '../scss/CardArea.scss'
 class CardArea extends Component {
   constructor(props) {
     super(props);
-    console.log( "Card Area", this.props.favorites);
-    
+
   }
   render() {
     let gamesCards =

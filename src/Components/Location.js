@@ -7,10 +7,9 @@ import unlike from '../images/Unlike.svg'
 
 
 function Location(props) {
-  console.log("location ",props.favorites);
   return(
     <div>
-      <article className="locationCard">
+      <article className="locationCard" value={props.name}>
         <img src={props.logo} className="locationLogo" />
         <LikeButton
           like={like}

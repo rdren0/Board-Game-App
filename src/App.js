@@ -14,8 +14,7 @@ class App extends Component {
       filteredLocations: [],
       favorites: []
     }
-
-    console.log( 'App ', this.state.favorites);
+    
     this.playerFilter = this.playerFilter.bind(this);
     this.foodFilter = this.foodFilter.bind(this);
     this.drinkFilter = this.drinkFilter.bind(this);
@@ -42,7 +41,7 @@ class App extends Component {
         throw new Error(err);
       })
 
-      let favorites = JSON.parse(localStorage.getItem('favorite') || []);
+      const favorites = JSON.parse(localStorage.getItem('favorite')) || [];
       this.setState({
         favorites: favorites
       })

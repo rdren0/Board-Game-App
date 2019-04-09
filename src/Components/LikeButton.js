@@ -16,7 +16,9 @@ class LikeButton extends Component {
     this.setState(state => ({
       isItemLiked: !state.isItemLiked
     }));
-    this.favoritesStorage.push(this.state.isItemLiked);
+    const articleEl = e.target.closest('article');
+    const title = articleEl.getAttribute('value');
+    this.favoritesStorage.push(title);
     this.saveToStorage();
   }
 
