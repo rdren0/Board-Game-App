@@ -14,8 +14,7 @@ class App extends Component {
       players: null,
       gameType: null,
       filteredGames: [],
-      filteredLocations: [],
-      favorites: []
+      filteredLocations: []
     }
 
     this.playerFilter = this.playerFilter.bind(this);
@@ -48,11 +47,6 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       })
-
-      const favorites = JSON.parse(localStorage.getItem('favorite')) || [];
-      this.setState({
-        favorites: favorites
-      })
   }
 
   shuffle() {
@@ -62,8 +56,6 @@ class App extends Component {
       filteredGames: splicedGames
     });
   }
-
-
 
   filterAllCards(value, property) {
     let counter = 0;

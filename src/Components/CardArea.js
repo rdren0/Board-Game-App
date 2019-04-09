@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import App from '../App.js';
 import NavBar from './NavBar.js'
 import Game from './Game.js'
 import Location from './Location.js'
@@ -10,9 +9,19 @@ class CardArea extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      view: "hello"
+      view: "Game",
+      favorites : []
     }
     this.changeCards = this.changeCards.bind(this);
+    this.toggleFav = this.toggleFav.bind(this);
+    this.saveToStorage = this.saveToStorage.bind(this);
+  }
+
+  componentDidMount() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    this.setState({
+      favorites: favorites
+    })
   }
 
   changeCards(e){
@@ -21,10 +30,28 @@ class CardArea extends Component {
       this.setState({view: "Locations"}, function(){
       console.log(this.state);
     });
-    }else{
+    } else{
       this.setState({view: "Games"}, function(){
     })};
   }
+  toggleFav(name) {
+  let newState;
+  if (this.state.favorites.includes(name))  {
+   newState = this.state.favorites.filter(fav => fav !== name)
+ } else {
+    newState = [...this.state.favorites, name]
+  }
+  this.setState({
+    favorites : newState
+  }, () => {
+  this.saveToStorage()
+  })
+}
+
+saveToStorage() {
+  localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
+  console.log("save to Storage method", this.state.favorites);
+}
   render() {
     if(this.state.view === "Games"){
        let gamesCards =
@@ -59,9 +86,16 @@ class CardArea extends Component {
               </section>
             </div>
           )
-    }else{
+    } else {
     let locationCards =
       this.props.locationData.map((location) => {
+        let liked;
+        console.log("this.state",this.state.favorites);
+        if (this.state.favorites.includes(location.name)) {
+          liked = true;
+        } else {
+          liked = false;
+        }
         return <Location
         name={location.name}
         address = {location.address}
@@ -77,9 +111,9 @@ class CardArea extends Component {
         googleMapsLink = {location.googleMapsLink}
         bringYourOwnGame = {location.bringYourOwnGame}
         gamesOffered = {location.gamesOffered}
-        favorites={this.props.favorites}
+        isFavorite={liked}
+        toggleFav={this.toggleFav}
         />
-
       });
         return (
           <div>
