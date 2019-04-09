@@ -23,11 +23,7 @@ class CardArea extends Component {
     });
     }else{
       this.setState({view: "Games"}, function(){
-      console.log(this.state);
-    });
-    }
-  }
-
+    })};
   }
   render() {
     if(this.state.view === "Games"){
@@ -85,7 +81,6 @@ class CardArea extends Component {
         />
 
       });
-<<<<<<< HEAD
         return (
           <div>
             <NavBar
@@ -105,28 +100,6 @@ class CardArea extends Component {
           </div>
           )
     }
-=======
-
-
-    return (
-      <div>
-        <NavBar
-        games={this.props.gamesData}
-        playerFilter={this.props.playerFilter}
-        weightFilter={this.props.weightFilter}
-        gameTypeFilter={this.props.gameTypeFilter}
-        foodFilter={this.props.foodFilter }
-        drinkFilter={this.props.drinkFilter }
-        sellerFilter={this.props.sellerFilter }
-        bringGameFilter={this.props.bringGameFilter } />
-
-        <section className="cardContainer">
-          {locationCards}
-          {gamesCards}
-        </section>
-      </div>
-    )
->>>>>>> locations
   }
 }
 

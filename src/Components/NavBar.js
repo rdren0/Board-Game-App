@@ -13,14 +13,7 @@ class NavBar extends Component {
     super(props);
   }
 
-<<<<<<< HEAD
-=======
-  testClick = (e) => {
-    console.log(e.target.id);
-  }
 
-
->>>>>>> locations
   render() {
     console.log(this.props.status)
     if(this.props.status === "Games"){
