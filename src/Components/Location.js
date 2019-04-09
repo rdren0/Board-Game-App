@@ -14,7 +14,9 @@ function Location(props) {
         <LikeButton
           like={like}
           unlike={unlike}
-          favorites={props.favorites} />
+          isFavorite={props.isFavorite}
+          toggleFav={props.toggleFav}
+          name={props.name}/>
         <div className="locationInfo">
           <h3>{props.name}</h3>
           <p>{props.address}</p>
