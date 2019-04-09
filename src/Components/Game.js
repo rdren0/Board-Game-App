@@ -10,7 +10,7 @@ function Game(props) {
           <p className="text">Players: {props.minPlayers}-{props.maxPlayers}</p>
           <p className="text">Weight: {props.weight}</p>
           <p className="text">Type: {props.type}</p>
-          <p className="text">Favorite</p>
+          <p className="text">Favorite {props.unlike}</p>
         </div>
     </div>
   )

@@ -14,9 +14,10 @@ class App extends Component {
       players: null,
       gameType: null,
       filteredGames: [],
-      filteredLocations: []
+      filteredLocations: [],
+      favorites: []
     }
-
+    
     this.playerFilter = this.playerFilter.bind(this);
     this.weightFilter = this.weightFilter.bind(this);
     this.gameTypeFilter = this.gameTypeFilter.bind(this)
@@ -46,6 +47,11 @@ class App extends Component {
       })
       .catch(err => {
         throw new Error(err);
+      })
+
+      const favorites = JSON.parse(localStorage.getItem('favorite')) || [];
+      this.setState({
+        favorites: favorites
       })
   }
 
@@ -181,11 +187,12 @@ class App extends Component {
         locationData={this.state.filteredLocations}
         playerFilter={this.playerFilter}
         weightFilter={this.weightFilter}
-        gameTypeFilter={this.gameTypeFilter} 
-        foodFilter={ this.foodFilter } 
-        drinkFilter={ this.drinkFilter } 
+        gameTypeFilter={this.gameTypeFilter}
+        foodFilter={ this.foodFilter }
+        drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
-        bringGameFilter={ this.bringGameFilter } />
+        bringGameFilter={ this.bringGameFilter}
+        favorites= { this.state.favorites}/>
       : 'Loading...';
 
     return (

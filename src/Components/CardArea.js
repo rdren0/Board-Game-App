@@ -5,6 +5,7 @@ import Game from './Game.js'
 import Location from './Location.js'
 import '../scss/CardArea.scss'
 
+
 class CardArea extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,7 @@ class CardArea extends Component {
     }
   }
 
+  }
   render() {
     if(this.state.view === "Games"){
        let gamesCards =
@@ -78,8 +80,12 @@ class CardArea extends Component {
         weekendClose = {location.weekendClose}
         googleMapsLink = {location.googleMapsLink}
         bringYourOwnGame = {location.bringYourOwnGame}
-        gamesOffered = {location.gamesOffered}/>
+        gamesOffered = {location.gamesOffered}
+        favorites={this.props.favorites}
+        />
+
       });
+<<<<<<< HEAD
         return (
           <div>
             <NavBar
@@ -99,6 +105,28 @@ class CardArea extends Component {
           </div>
           )
     }
+=======
+
+
+    return (
+      <div>
+        <NavBar
+        games={this.props.gamesData}
+        playerFilter={this.props.playerFilter}
+        weightFilter={this.props.weightFilter}
+        gameTypeFilter={this.props.gameTypeFilter}
+        foodFilter={this.props.foodFilter }
+        drinkFilter={this.props.drinkFilter }
+        sellerFilter={this.props.sellerFilter }
+        bringGameFilter={this.props.bringGameFilter } />
+
+        <section className="cardContainer">
+          {locationCards}
+          {gamesCards}
+        </section>
+      </div>
+    )
+>>>>>>> locations
   }
 }
 
