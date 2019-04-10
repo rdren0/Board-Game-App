@@ -12,12 +12,23 @@ Rachael Drennan  https://github.com/rdren0
 
 ## To begin:
 In your terminal:
-#### `npm install`
-#### `npm start`
+
+```bash
+npm  install
+```
+
+```bash
+npm start
+```
+
+Go to `http://localhost:3000/` in your browser to view your code running in the browser.
+
 
 
 ![BoardGameApp](screenshot.png)
 
 ![BoardGameApp](locations.png)
+
+
 
 
