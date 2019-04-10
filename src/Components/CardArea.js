@@ -19,11 +19,8 @@ class CardArea extends Component {
   }
 
   changeCards(e){
-    console.log(e.target.innerText);
     if(e.target.innerText === "Locations"){
-      this.props.drinkFilter()
       this.setState({view: "Locations"}, function(){
-      console.log(this.state);
     });
     } else{
       this.setState({view: "Games"}, function(){

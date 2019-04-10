@@ -1,3 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavBar should match the snapshot with all data passed in correctly 1`] = `undefined`;
+exports[`NavBar should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <nav>
+    <ul>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="One Player Games"
+            src="One-Player.svg"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="Two Player Games"
+            src="Two-Players.svg"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="Three Player Games"
+            src="Three-Players.svg"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="Four Player Games"
+            src="Four-Players.svg"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="Five Player Games"
+            src="Five-Players.svg"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={[Function]}
+        >
+          <img
+            alt="Group Player Games"
+            src="Group-Players.svg"
+          />
+        </button>
+      </li>
+    </ul>
+    <select>
+      <option>
+        Difficulty
+      </option>
+      <option>
+        Light
+      </option>
+      <option>
+        Medium
+      </option>
+      <option>
+        Heavy
+      </option>
+    </select>
+    <select>
+      <option>
+        Type
+      </option>
+      <option>
+        Party
+      </option>
+      <option>
+        Strategy
+      </option>
+      <option>
+        Thematic
+      </option>
+      <option>
+        Children's
+      </option>
+      <option>
+        Family
+      </option>
+      <option>
+        Abstract
+      </option>
+    </select>
+    <button
+      className="location toggle-button"
+      id="location"
+    >
+      Locations
+    </button>
+  </nav>
+</div>
+`;

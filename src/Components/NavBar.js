@@ -32,7 +32,7 @@ class NavBar extends Component {
           <button className='magnifyButton' onClick={this.props.searchByText}><img src={search}/></button>
           <input className='searchLocation 'type="text" placeholder="Search by Location" onChange={this.props.searchLowerCase}/>
         </section>
-        <button className='changeGames' onClick={this.props.changeCards}>Games</button>
+        <button className='changeGames toggle-button' onClick={this.props.changeCards}>Games</button>
       </nav>
       </div>
       )
@@ -63,7 +63,7 @@ class NavBar extends Component {
             <option>Family</option>
             <option>Abstract</option>
           </select>
-          <button className='location' id="location" onClick={this.props.changeCards}>Locations</button>
+          <button className='location toggle-button' id="location" onClick={this.props.changeCards}>Locations</button>
         </nav>
         </div>
     )

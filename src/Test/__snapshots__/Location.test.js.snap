@@ -1,3 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Location should match the snapshot with all data passed in correctly 1`] = `undefined`;
+exports[`Location should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="location-wrapper"
+>
+  <article
+    className="locationCard"
+  >
+    <img
+      className="locationLogo"
+    />
+    <div
+      className="locationInfo"
+    >
+      <h2 />
+      <p />
+      <p>
+        M-F: 
+        -
+      </p>
+      <p>
+        Sa & Su: 
+        -
+      </p>
+      <a />
+    </div>
+    <LikeButton
+      isFavorite={false}
+      like="Like.svg"
+      toggleFav={[MockFunction]}
+      unlike="Unlike.svg"
+    />
+  </article>
+</div>
+`;

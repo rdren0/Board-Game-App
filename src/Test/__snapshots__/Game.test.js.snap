@@ -1,3 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Game should match the snapshot with all data passed in correctly 1`] = `undefined`;
+exports[`Game should match the snapshot with all data passed in correctly 1`] = `
+<div
+  className="gameCard"
+>
+  <img
+    className="gameCardImage"
+  />
+  <div
+    className="additionalGameInfo"
+  >
+    <p
+      className="text"
+    />
+    <p
+      className="text"
+    >
+      Players: 
+      -
+    </p>
+    <p
+      className="text"
+    >
+      Weight: 
+    </p>
+    <p
+      className="text"
+    >
+      Type: 
+    </p>
+  </div>
+</div>
+`;

@@ -1,6 +1,12 @@
+import Header from '../Components/Header';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from '../Components/Header';
+import { shallow } from 'enzyme';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+
 
 
 describe('Header', () => {
