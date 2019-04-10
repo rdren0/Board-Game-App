@@ -90,7 +90,6 @@ class CardArea extends Component {
         gamesOffered = {location.gamesOffered}
         isFavorite={liked}
         toggleFav={this.props.toggleFav}
-        filterFavorites={this.filterFavorites}
 
         />
       });
@@ -107,7 +106,9 @@ class CardArea extends Component {
             drinkFilter={this.props.drinkFilter }
             sellerFilter={ this.props.sellerFilter }
             bringGameFilter={ this.props.bringGameFilter }
-            searchByText={this.props.searchByText} />
+            searchByText={this.props.searchByText}
+            filterFavorites={this.props.filterFavorites}
+             />
             <section className="locationCardContainer">
             {locationCards}
             </section>

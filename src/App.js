@@ -16,8 +16,7 @@ class App extends Component {
       filteredGames: [],
       filteredLocations: [],
       searchInput: '',
-      favorites : [],
-      filterFavorites: []
+      favorites : []
     }
 
     this.playerFilter = this.playerFilter.bind(this);
@@ -33,6 +32,7 @@ class App extends Component {
     this.searchLowerCase = this.searchLowerCase.bind(this);
     this.saveToStorage = this.saveToStorage.bind(this);
     this.toggleFav = this.toggleFav.bind(this);
+    this.filterFavorites = this.filterFavorites.bind(this);
 
   }
 
@@ -211,6 +211,28 @@ class App extends Component {
     });
   }
 
+  filterFavorites() {
+    let filteredLocations = [];
+    let newLocation;
+      this.state.favorites.forEach(fav => {
+        newLocation = this.state.locations.find(location => {
+          return location.name === fav
+      })
+      filteredLocations.push(newLocation)
+      console.log("filteredLocations", filteredLocations);
+     })
+     this.setState({
+       filteredLocations : filteredLocations
+     })
+    // let filteredLocations = this.state.locations.filter(location => {
+    //   location.name === this.state.favorites
+    //   console.log(filteredLocations);
+    // })
+    // this.setState({
+    //   filteredLocations : filteredLocations
+    // });
+  }
+
 
   render() {
     let cardArea = this.state.games.length ?
@@ -224,9 +246,10 @@ class App extends Component {
         drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
         bringGameFilter={ this.bringGameFilter}
-        favorites= { this.state.favorites}
+        favorites= {this.state.favorites}
         searchByText={this.searchByText}
-        toggleFav={this.toggleFav} />
+        toggleFav={this.toggleFav}
+        filterFavorites={this.filterFavorites} />
       : 'Loading...';
 
     return (
