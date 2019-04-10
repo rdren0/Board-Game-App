@@ -103,7 +103,7 @@ exports[`NavBar should match the snapshot with all data passed in correctly 1`] 
       </option>
     </select>
     <button
-      className="location"
+      className="location toggle-button"
       id="location"
     >
       Locations

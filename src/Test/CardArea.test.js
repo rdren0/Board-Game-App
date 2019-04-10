@@ -7,16 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-const locationData = jest.fn();
-const playerFilter = jest.fn();
-const weightFilter = jest.fn();
-const gameTypeFilter = jest.fn();
-const foodFilter = jest.fn();
-const sellerFilter = jest.fn();
-const drinkFilter = jest.fn();
-const bringGameFilter = jest.fn();
-const searchByText = jest.fn();
-
 
 const favorites = []
 const mockData = [{
@@ -44,4 +34,10 @@ gamesData={mockData}
   it('should match the snapshot with all data passed in correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+   it('should have the proper defualt state', () => {
+    expect(wrapper.state('view')).toEqual("Games");
+    expect(wrapper.state('favorites')).toEqual([]);
+  });
+
 });
