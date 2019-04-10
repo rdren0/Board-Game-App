@@ -224,13 +224,6 @@ class App extends Component {
      this.setState({
        filteredLocations : filteredLocations
      })
-    // let filteredLocations = this.state.locations.filter(location => {
-    //   location.name === this.state.favorites
-    //   console.log(filteredLocations);
-    // })
-    // this.setState({
-    //   filteredLocations : filteredLocations
-    // });
   }
 
 
