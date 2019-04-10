@@ -1,14 +1,46 @@
+.locationCardContainer {
+  background-color: #DCE6EC;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-row-gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
 .locationCard {
-  border: 1px solid gainsboro;
+  width: 100%;
+}
+
+.location-wrapper {
+  border: 2px solid #2eaebb;
   border-radius: 15px;
-  margin: 10px;
-  height: 130px;
-  display: flex;
+  width: 95%;
 }
 
 .locationLogo {
-  display: block;
-  border: 3px solid #000000;
-  height: 75px;
-  width: 75px;
+  display: inline;
+  border: 3px solid #444f68;
+  box-shadow: 2px 2px #2eaebb;
+  height: 90px;
+  margin: 5px;
+  width: 100px;
 }
+
+p {
+  margin: 10px;
+  text-align: center;
+  width: 90%;
+}
+
+a {
+  color: #444f68;
+  word-wrap: break-word;
+}
+
+.like-btn {
+  margin: 6px;
+  justify-content: flex-start;
+}
+
+
+

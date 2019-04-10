@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardArea should match the snapshot with all data passed in correctly 1`] = `
+<div>
+  <NavBar
+    changeCards={[Function]}
+    games={
+      Array [
+        Object {
+          "features": Array [
+            "adventure",
+            "hidden traitor",
+            "dice rolling",
+            "cooperative",
+          ],
+          "gameId": 4,
+          "image": "https://i.imgur.com/t12PXuZ.jpg",
+          "maxPlayers": 6,
+          "minPlayers": 3,
+          "name": "Betrayal at House on the Hill",
+          "timeToPlay": 60,
+          "type": "thematic",
+          "weight": "medium",
+        },
+        Object {
+          "features": Array [
+            "auction",
+            "family",
+          ],
+          "gameId": 5,
+          "image": "https://i.imgur.com/pbutakO.jpg",
+          "maxPlayers": 4,
+          "minPlayers": 2,
+          "name": "Boss Monster",
+          "timeToPlay": 20,
+          "type": "strategy",
+          "weight": "medium",
+        },
+        Object {
+          "features": Array [
+            "dice rolling",
+            "family",
+            "wagering",
+          ],
+          "gameId": 6,
+          "image": "https://i.imgur.com/93iAMYa.jpg",
+          "maxPlayers": 8,
+          "minPlayers": 2,
+          "name": "Camel Up",
+          "timeToPlay": 30,
+          "type": "party",
+          "weight": "medium",
+        },
+      ]
+    }
+    status="Games"
+  />
+  <section
+    className="cardContainer"
+  >
+    <Game
+      features={
+        Array [
+          "adventure",
+          "hidden traitor",
+          "dice rolling",
+          "cooperative",
+        ]
+      }
+      id={4}
+      image="https://i.imgur.com/t12PXuZ.jpg"
+      maxPlayers={6}
+      minPlayers={3}
+      name="Betrayal at House on the Hill"
+      timeToPlay={60}
+      type="thematic"
+      weight="medium"
+    />
+    <Game
+      features={
+        Array [
+          "auction",
+          "family",
+        ]
+      }
+      id={5}
+      image="https://i.imgur.com/pbutakO.jpg"
+      maxPlayers={4}
+      minPlayers={2}
+      name="Boss Monster"
+      timeToPlay={20}
+      type="strategy"
+      weight="medium"
+    />
+    <Game
+      features={
+        Array [
+          "dice rolling",
+          "family",
+          "wagering",
+        ]
+      }
+      id={6}
+      image="https://i.imgur.com/93iAMYa.jpg"
+      maxPlayers={8}
+      minPlayers={2}
+      name="Camel Up"
+      timeToPlay={30}
+      type="party"
+      weight="medium"
+    />
+  </section>
+</div>
+`;

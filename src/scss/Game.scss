@@ -1,7 +1,6 @@
 .gameCard {
   height: 200px;
   margin: 0px;
-  width: 25%;
 }
 
 img.gameCardImage {
@@ -12,9 +11,11 @@ img.gameCardImage {
 
 .additionalGameInfo {
   transition: .5s ease;
-  width: 150px;
+  width: 100%;
+  padding-bottom: 3px;
   opacity: 0;
   transform: translate(-0%, -125%);
+  margin: 0px;
 }
 
 .gameCard:hover .gameCardImage {
@@ -29,4 +30,6 @@ img.gameCardImage {
   background-color: #FFFFFF;
   color: #000000;
   font-size: 16px;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
 }

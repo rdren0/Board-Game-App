@@ -3,11 +3,14 @@
 @import './NavBar.scss';
 @import url('https://fonts.googleapis.com/css?family=Francois+One');
 @import './App.scss';
+@import './LikeButton.scss';
+@import './Game.scss';
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Francois One';
+  background-color: #DCE6EC;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

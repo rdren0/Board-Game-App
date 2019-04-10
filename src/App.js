@@ -10,15 +10,29 @@ class App extends Component {
     this.state = {
       locations: [],
       games: [],
+      weight: null,
+      players: null,
+      gameType: null,
       filteredGames: [],
-      filteredLocations: []
+      filteredLocations: [],
+      searchInput: '',
+      favorites : []
     }
 
     this.playerFilter = this.playerFilter.bind(this);
+    this.weightFilter = this.weightFilter.bind(this);
+    this.gameTypeFilter = this.gameTypeFilter.bind(this)
     this.foodFilter = this.foodFilter.bind(this);
     this.drinkFilter = this.drinkFilter.bind(this);
     this.sellerFilter = this.sellerFilter.bind(this);
     this.bringGameFilter = this.bringGameFilter.bind(this);
+    this.filterFilteredCards = this.filterFilteredCards.bind(this);
+    this.filterAllCards = this.filterAllCards.bind(this);
+    this.searchByText = this.searchByText.bind(this);
+    this.saveToStorage = this.saveToStorage.bind(this);
+    this.toggleFav = this.toggleFav.bind(this);
+    this.filterFavorites = this.filterFavorites.bind(this);
+
   }
 
   componentDidMount() {
@@ -39,38 +53,147 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       })
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      this.setState({
+        favorites: favorites
+      });
+    }
+
+
+  toggleFav(name) {
+    let newState;
+    if (this.state.favorites.includes(name))  {
+     newState = this.state.favorites.filter(fav => fav !== name)
+    } else {
+      newState = [...this.state.favorites, name]
+    }
+    this.setState({
+      favorites : newState
+    }, () => {
+    this.saveToStorage()
+    })
   }
 
-  shuffle() {
-    console.log('shuffle success')
-    let shuffledGames = this.state.games.sort(() => 0.5 - Math.random());
-    let splicedGames = shuffledGames.splice(0, 8);
+  searchByText(e) {
+    let search = e.target.value.toLowerCase();
+    console.log(search);
+    let locationByText = this.state.locations.filter(location => {
+      return location.name.includes(search)
+    })
     this.setState({
-      filteredGames: splicedGames
+      filteredLocations: locationByText
+    })
+  }
+
+  saveToStorage() {
+    localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
+  }
+
+  filterAllCards(value, property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game[value] === property;
     });
+    if(filterGames.length > 0){
+      this.setState({
+        filteredGames: filterGames
+      });    }
+
+  }
+
+  filterAllCardsPlayers(property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game.minPlayers <= property && game.maxPlayers >= property;
+    });
+    if(filterGames.length === 0){
+      this.setState({filteredGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+
+    }
+  }
+
+
+  filterAllCardsByType(value, property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game[value].includes(property);
+    });
+    if(filterGames.length > 0){
+      this.setState({
+        filteredGames: filterGames
+      });    }
+
+  }
+
+  filterFilteredCards(value, property) {
+    let counter = 0;
+    let filterGames = this.state.filteredGames.filter(game =>{
+      return game[value] === property;
+    })
+    if(filterGames.length === 0){
+      this.setState({filteredGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+    }
+  }
+
+  filterFilteredCardsByType(value, property) {
+    console.log("FFCBT value",value)
+        console.log("FFCBT property", property)
+
+    let filterGames = this.state.filteredGames.filter(game =>{
+      console.log("testing" ,game[value])
+      return game[value].includes(property);
+    })
+    if(filterGames.length === 0){
+      this.setState({filteredGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+    }
   }
 
   playerFilter(numOfPlayers) {
-    let filteredGames = this.state.games.filter(game => game.minPlayers === numOfPlayers);
+    let playerInput = numOfPlayers;
     this.setState({
-      filteredGames: filteredGames
+      players: playerInput
     });
+  if(this.filteredGames !== undefined){
+    this.filterFilteredCardsPlayers(playerInput)
+  } else{
+    this.filterAllCardsPlayers(playerInput)
+    }
   }
 
-  weightFilter = (e) => {
-    let weightOption = e.target.value.toLowerCase();
-    let filteredGames = this.state.games.filter(game => game.weight === weightOption);
+  weightFilter(e){
+    let weightInput = e.target.value.toLowerCase();
     this.setState({
-      filteredGames: filteredGames
+      weight: weightInput
     });
+    if(this.filteredGames !== undefined){
+    this.filterFilteredCards("weight",weightInput)
+    } else{
+      this.filterAllCards("weight", weightInput)
+    }
   }
 
-  gameTypeFilter = (e) => {
-    let typeOption = e.target.value.toLowerCase();
-    let filteredGames = this.state.games.filter(game => game.type === typeOption);
+  gameTypeFilter(e){
+    let gameTypeInput = e.target.value;
     this.setState({
-      filteredGames: filteredGames
+      gameType: gameTypeInput
     });
+     if(this.state.filteredGames === undefined){
+    this.filterAllCardsByType("type",gameTypeInput)
+    } else{
+    this.filterFilteredCardsByType("type", gameTypeInput)
+    }
   }
 
   foodFilter() {
@@ -105,6 +228,22 @@ class App extends Component {
     });
   }
 
+  filterFavorites() {
+    let filteredLocations = [];
+    let newLocation;
+      this.state.favorites.forEach(fav => {
+        newLocation = this.state.locations.find(location => {
+          return location.name === fav
+      })
+      filteredLocations.push(newLocation)
+      console.log("filteredLocations", filteredLocations);
+     })
+     this.setState({
+       filteredLocations : filteredLocations
+     })
+  }
+
+
   render() {
     let cardArea = this.state.games.length ?
       <CardArea
@@ -112,11 +251,15 @@ class App extends Component {
         locationData={this.state.filteredLocations}
         playerFilter={this.playerFilter}
         weightFilter={this.weightFilter}
-        gameTypeFilter={this.gameTypeFilter} 
-        foodFilter={ this.foodFilter } 
-        drinkFilter={ this.drinkFilter } 
+        gameTypeFilter={this.gameTypeFilter}
+        foodFilter={ this.foodFilter }
+        drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
-        bringGameFilter={ this.bringGameFilter } />
+        bringGameFilter={ this.bringGameFilter}
+        favorites= {this.state.favorites}
+        searchByText={this.searchByText}
+        toggleFav={this.toggleFav}
+        filterFavorites={this.filterFavorites} />
       : 'Loading...';
 
     return (
