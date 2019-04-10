@@ -9,7 +9,7 @@ class CardArea extends Component {
   constructor(props) {
     super(props);
     this.state ={
-      view: "Game",
+      view: "Games",
       favorites : []
     }
     this.changeCards = this.changeCards.bind(this);
@@ -22,11 +22,13 @@ class CardArea extends Component {
     this.setState({
       favorites: favorites
     })
+    this.props.playerFilter(1);
   }
 
   changeCards(e){
     console.log(e.target.innerText);
     if(e.target.innerText === "Locations"){
+      this.props.drinkFilter()
       this.setState({view: "Locations"}, function(){
       console.log(this.state);
     });
@@ -34,6 +36,7 @@ class CardArea extends Component {
       this.setState({view: "Games"}, function(){
     })};
   }
+
   toggleFav(name) {
   let newState;
   if (this.state.favorites.includes(name))  {
