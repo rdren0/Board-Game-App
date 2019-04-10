@@ -1,14 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CardArea from '../Components/CardArea';
+import { shallow } from 'enzyme';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+configure({ adapter: new Adapter() });
+
+const locationData = jest.fn();
+const playerFilter = jest.fn();
+const weightFilter = jest.fn();
+const gameTypeFilter = jest.fn();
+const foodFilter = jest.fn();
+const sellerFilter = jest.fn();
+const drinkFilter = jest.fn();
+const bringGameFilter = jest.fn();
+const searchByText = jest.fn();
+
+
+const favorites = []
+const mockData = [{
+name: "Betrayal at House on the Hill",minPlayers: 3,maxPlayers: 6,weight: "medium",
+timeToPlay: 60,type: "thematic",features: ["adventure","hidden traitor","dice rolling","cooperative"],
+image: "https://i.imgur.com/t12PXuZ.jpg",gameId: 4},
+{name: "Boss Monster",minPlayers: 2,maxPlayers: 4,weight: "medium",timeToPlay: 20,type: "strategy",features: ["auction","family"],
+image: "https://i.imgur.com/pbutakO.jpg",gameId: 5},
+{name: "Camel Up",minPlayers: 2,maxPlayers: 8,weight: "medium",timeToPlay: 30,type: "party",
+features: ["dice rolling","family","wagering"],image: "https://i.imgur.com/93iAMYa.jpg",gameId: 6}
+]
 
 describe('CardArea', () => {
   let wrapper;
   
   beforeEach(() =>{
     wrapper = shallow(
-      <CardArea/>
+      <CardArea
+gamesData={mockData}
+        favorites= {favorites}
+        />
     )
   })
 
