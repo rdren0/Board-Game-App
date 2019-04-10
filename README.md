@@ -9,3 +9,6 @@ In your terminal:
 
 ![BoardGameApp](screenshot.png)
 
+![BoardGameApp](locations.png)
+
+
