@@ -7,5 +7,5 @@ In your terminal:
 
 
 
-![BoardGameApp](https://imgur.com/V2iasS1)
+![BoardGameApp](screenshot.png)
 
