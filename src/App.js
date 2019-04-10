@@ -85,7 +85,7 @@ class App extends Component {
       return game[value] === property;
     });
     if(filterGames.length === 0){
-      this.setState({filterGames: null})
+      this.setState({filteredGames: "none"})
     }else{
       this.setState({
         filteredGames: filterGames
@@ -99,7 +99,7 @@ class App extends Component {
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
     if(filterGames.length === 0){
-      this.setState({filterGames: null})
+      this.setState({filteredGames: "none"})
     }else{
       this.setState({
         filteredGames: filterGames
@@ -114,7 +114,7 @@ class App extends Component {
       return game[value] === property;
     })
     if(filterGames.length === 0){
-      this.setState({filterGames: null})
+      this.setState({filteredGames: "none"})
     }else{
       this.setState({
         filteredGames: filterGames
