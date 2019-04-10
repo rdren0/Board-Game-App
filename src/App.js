@@ -61,11 +61,9 @@ class App extends Component {
   }
 
   searchByText(e) {
-    console.log('e', e.target.value);
     let locationByText = this.state.locations.filter(location => {
       return location.name.includes(this.state.searchInput)
     })
-    console.log("this.state.searchInput", this.state.searchInput);
     this.setState({
       filteredLocations: locationByText
     })
@@ -79,18 +77,28 @@ class App extends Component {
     })
   }
 
+  filterAllCardsByType(value, property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game[value].includes(property);
+    });
+    if(filterGames.length > 0){
+      this.setState({
+        filteredGames: filterGames
+      });    }
+
+  }
+
   filterAllCards(value, property) {
     let counter = 0;
     let filterGames = this.state.games.filter(game =>{
       return game[value] === property;
     });
-    if(filterGames.length === 0){
-      this.setState({filteredGames: "none"})
-    }else{
+    if(filterGames.length > 0){
       this.setState({
         filteredGames: filterGames
-      });
-    }
+      });    }
+
   }
 
   filterAllCardsPlayers(property) {
@@ -99,7 +107,7 @@ class App extends Component {
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
     if(filterGames.length === 0){
-      this.setState({filteredGames: "none"})
+      this.setState({filteredGames: null})
     }else{
       this.setState({
         filteredGames: filterGames
@@ -114,7 +122,24 @@ class App extends Component {
       return game[value] === property;
     })
     if(filterGames.length === 0){
-      this.setState({filteredGames: "none"})
+      this.setState({filteredGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+    }
+  }
+
+  filterFilteredCardsByType(value, property) {
+    console.log("FFCBT value",value)
+        console.log("FFCBT property", property)
+
+    let filterGames = this.state.filteredGames.filter(game =>{
+      console.log("testing" ,game[value])
+      return game[value].includes(property);
+    })
+    if(filterGames.length === 0){
+      this.setState({filteredGames: null})
     }else{
       this.setState({
         filteredGames: filterGames
@@ -147,15 +172,22 @@ class App extends Component {
   }
 
   gameTypeFilter(e){
-    console.log("4:", this.filteredGames);
-    let gameTypeInput = e.target.value.toLowerCase();
+    console.log("gameTypeFilter1:", this.state.filteredGames);
+    let gameTypeInput = e.target.value;
+    console.log("gameTypeFilter2:", gameTypeInput);    
     this.setState({
       gameType: gameTypeInput
     });
-     if(this.filteredGames !== undefined){
-    this.filterFilteredCards("gameType",this.state.gameType)
+    console.log("gameTypeFilter3:", gameTypeInput);    
+
+     if(this.state.filteredGames === undefined){
+          console.log("gameTypeFilter4:", this.state.filteredGames);    
+
+    this.filterAllCardsByType("type",gameTypeInput)
     } else{
-    this.filterAllCards("gameType",this.state.gameType)
+          console.log("gameTypeFilter5:", this.state.filteredGames);    
+
+    this.filterFilteredCardsByType("type", gameTypeInput)
     }
   }
 

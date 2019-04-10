@@ -22,7 +22,6 @@ class CardArea extends Component {
     this.setState({
       favorites: favorites
     })
-    this.props.playerFilter(1);
   }
 
   changeCards(e){
