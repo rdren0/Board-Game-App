@@ -132,7 +132,7 @@ class CardArea extends Component {
             sellerFilter={ this.props.sellerFilter }
             bringGameFilter={ this.props.bringGameFilter }
             searchByText={this.props.searchByText} />
-            <section className="cardContainer">
+            <section className="locationCardContainer">
             {locationCards}
             </section>
           </div>
