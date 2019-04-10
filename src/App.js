@@ -29,7 +29,6 @@ class App extends Component {
     this.filterFilteredCards = this.filterFilteredCards.bind(this);
     this.filterAllCards = this.filterAllCards.bind(this);
     this.searchByText = this.searchByText.bind(this);
-    this.searchLowerCase = this.searchLowerCase.bind(this);
     this.saveToStorage = this.saveToStorage.bind(this);
     this.toggleFav = this.toggleFav.bind(this);
     this.filterFavorites = this.filterFavorites.bind(this);
@@ -76,8 +75,10 @@ class App extends Component {
   }
 
   searchByText(e) {
+    let search = e.target.value.toLowerCase();
+    console.log(search);
     let locationByText = this.state.locations.filter(location => {
-      return location.name.includes(this.state.searchInput)
+      return location.name.includes(search)
     })
     this.setState({
       filteredLocations: locationByText
@@ -87,15 +88,6 @@ class App extends Component {
   saveToStorage() {
     localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
   }
-
-  searchLowerCase(e) {
-    let search = e.target.value
-    console.log("e", e);
-    this.setState({
-      searchInput: search
-    })
-  }
-
 
   filterAllCards(value, property) {
     let counter = 0;

@@ -30,13 +30,13 @@ class NavBar extends Component {
         </ul>
         <section>
           <button className='magnifyButton' onClick={this.props.searchByText}><img src={search}/></button>
-          <input className='searchLocation 'type="text" placeholder="Search by Location" onChange={this.props.searchLowerCase}/>
+          <input className='searchLocation 'type="text" placeholder="Search by Location" onChange={this.props.searchByText}/>
         </section>
         <button className='changeGames toggle-button' onClick={this.props.changeCards}>Games</button>
       </nav>
       </div>
       )
-    }else{
+    } else{
       return (
         <div>
         <nav>
