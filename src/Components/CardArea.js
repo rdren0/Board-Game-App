@@ -10,18 +10,11 @@ class CardArea extends Component {
     super(props);
     this.state ={
       view: "Games",
-      favorites : []
     }
     this.changeCards = this.changeCards.bind(this);
-    this.toggleFav = this.toggleFav.bind(this);
-    this.saveToStorage = this.saveToStorage.bind(this);
   }
 
   componentDidMount() {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    this.setState({
-      favorites: favorites
-    })
     this.props.playerFilter(1);
   }
 
@@ -35,24 +28,6 @@ class CardArea extends Component {
     } else{
       this.setState({view: "Games"}, function(){
     })};
-  }
-
-  toggleFav(name) {
-  let newState;
-  if (this.state.favorites.includes(name))  {
-   newState = this.state.favorites.filter(fav => fav !== name)
- } else {
-    newState = [...this.state.favorites, name]
-  }
-  this.setState({
-    favorites : newState
-  }, () => {
-  this.saveToStorage()
-  })
-}
-
-  saveToStorage() {
-    localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
   }
 
   render() {
@@ -93,7 +68,7 @@ class CardArea extends Component {
     let locationCards =
       this.props.locationData.map((location) => {
         let liked;
-        if (this.state.favorites.includes(location.name)) {
+        if (this.props.favorites.includes(location.name)) {
           liked = true;
         } else {
           liked = false;
@@ -114,7 +89,8 @@ class CardArea extends Component {
         bringYourOwnGame = {location.bringYourOwnGame}
         gamesOffered = {location.gamesOffered}
         isFavorite={liked}
-        toggleFav={this.toggleFav}
+        toggleFav={this.props.toggleFav}
+        filterFavorites={this.filterFavorites}
 
         />
       });
