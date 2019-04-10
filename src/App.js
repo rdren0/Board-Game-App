@@ -77,17 +77,6 @@ class App extends Component {
     })
   }
 
-  filterAllCardsByType(value, property) {
-    let counter = 0;
-    let filterGames = this.state.games.filter(game =>{
-      return game[value].includes(property);
-    });
-    if(filterGames.length > 0){
-      this.setState({
-        filteredGames: filterGames
-      });    }
-
-  }
 
   filterAllCards(value, property) {
     let counter = 0;
@@ -114,6 +103,19 @@ class App extends Component {
       });
 
     }
+  }
+
+
+  filterAllCardsByType(value, property) {
+    let counter = 0;
+    let filterGames = this.state.games.filter(game =>{
+      return game[value].includes(property);
+    });
+    if(filterGames.length > 0){
+      this.setState({
+        filteredGames: filterGames
+      });    }
+
   }
 
   filterFilteredCards(value, property) {
@@ -165,32 +167,23 @@ class App extends Component {
       weight: weightInput
     });
     if(this.filteredGames !== undefined){
-    this.filterFilteredCards("weight",this.state.weight)
+    this.filterFilteredCards("weight",weightInput)
     } else{
-      this.filterAllCards("weight", this.state.weight)
+      this.filterAllCards("weight", weightInput)
     }
   }
 
   gameTypeFilter(e){
-    console.log("gameTypeFilter1:", this.state.filteredGames);
     let gameTypeInput = e.target.value;
-    console.log("gameTypeFilter2:", gameTypeInput);    
     this.setState({
       gameType: gameTypeInput
     });
-    console.log("gameTypeFilter3:", gameTypeInput);    
-
      if(this.state.filteredGames === undefined){
-          console.log("gameTypeFilter4:", this.state.filteredGames);    
-
     this.filterAllCardsByType("type",gameTypeInput)
     } else{
-          console.log("gameTypeFilter5:", this.state.filteredGames);    
-
     this.filterFilteredCardsByType("type", gameTypeInput)
     }
   }
-
 
   foodFilter() {
     let filteredLocations = this.state.locations.filter(location => location.hasFood === true);
