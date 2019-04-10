@@ -22,16 +22,17 @@ class NavBar extends Component {
         <div>
       <nav>
         <ul>
-          <li><button onClick={() => this.props.foodFilter()}>Has Food</button></li>
-          <li><button onClick={() => this.props.drinkFilter()}>Has Drinks</button></li>
-          <li><button onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
-          <li><button onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
+          <li ><button className='locationButton' onClick={() => this.props.foodFilter()}>Has Food</button></li>
+          <li ><button className='locationButton' onClick={() => this.props.drinkFilter()}>Has Drinks</button></li>
+          <li ><button className='locationButton' onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
+          <li ><button className='locationButton' onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
+          <li><button className='locationButton'>Favorites</button></li>
         </ul>
         <section>
-          <input type="text" placeholder="Search by Location" onChange={this.props.searchLowerCase}/>
-          <button onClick={this.props.searchByText}><img src={search}/></button>
+          <button className='magnifyButton' onClick={this.props.searchByText}><img src={search}/></button>
+          <input className='searchLocation 'type="text" placeholder="Search by Location" onChange={this.props.searchLowerCase}/>
         </section>
-        <button onClick={this.props.changeCards}>Games</button>
+        <button className='changeGames' onClick={this.props.changeCards}>Games</button>
       </nav>
       </div>
       )
@@ -48,7 +49,7 @@ class NavBar extends Component {
             <li><button onClick={() => this.props.playerFilter(6)}><img src={groupPlayers} alt="Group Player Games" /></button></li>
           </ul>
           <select onChange={this.props.weightFilter}>
-            <option>Weight </option>
+            <option>Difficulty</option>
             <option>Light</option>
             <option>Medium</option>
             <option>Heavy</option>
@@ -62,7 +63,7 @@ class NavBar extends Component {
             <option>Family</option>
             <option>Abstract</option>
           </select>
-          <button id="location" onClick={this.props.changeCards}>Locations</button>
+          <button className='location' id="location" onClick={this.props.changeCards}>Locations</button>
         </nav>
         </div>
     )

@@ -1,17 +1,40 @@
+.locationCardContainer {
+  background-color: #DCE6EC;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-row-gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
 .locationCard {
-  display: flex;
-  flex-flow: column wrap;
-  margin: 10px;
-  margin-left: 0;
-  margin-right: 100px;
-  height: 130px;
+  width: 100%;
+}
+
+.location-wrapper {
+  border: 2px solid #2eaebb;
+  border-radius: 15px;
+  width: 95%;
 }
 
 .locationLogo {
   display: inline;
-  border: 3px solid #000000;
-  height: 75px;
-  width: 75px;
+  border: 3px solid #444f68;
+  box-shadow: 2px 2px #2eaebb;
+  height: 90px;
+  margin: 5px;
+  width: 100px;
+}
+
+p {
+  margin: 10px;
+  text-align: center;
+  width: 90%;
+}
+
+a {
+  color: #444f68;
+  word-wrap: break-word;
 }
 
 .like-btn {
@@ -19,19 +42,5 @@
   justify-content: flex-start;
 }
 
-.locationInfo {
-  margin: 0px;
-  display: inline;
-}
 
-p {
-  font-size: 16px;
-  flex-flow: wrap;
-  margin-left: 0;
-  margin-right: 20px;
-}
 
-.location-wrapper {
-  border: 2px solid gainsboro;
-  border-radius: 15px;
-}

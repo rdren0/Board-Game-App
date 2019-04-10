@@ -3,20 +3,14 @@ img {
   margin: 0 10px;
 }
 
+ul {
+  display: inherit;
+  padding: 0px;
+}
+
 li {
-  border: solid 2px #DCE6EC;
-  border-bottom-color: #444f68;
-  border-top-color: #444f68;
   display: inline-block;
   list-style: none;
-}
-
-li.first {
-  border-left-color: #444f68;
-}
-
-li.last {
-  border-right-color: #444f68;
 }
 
 nav {
@@ -24,6 +18,7 @@ nav {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
+  align-content: center;
 }
 
 select {
@@ -31,8 +26,9 @@ select {
   border-radius: 40px;
   box-shadow: 2px 2px #2eaebb;
   color: #444f68;
-  margin: 10px;
-  width: 120px;
+  height: 40px;
+  margin: 40px 10px 25px 10px;
+  width: 150px;
 }
 
 button {
@@ -40,8 +36,19 @@ button {
   border-radius: 40px;
   box-shadow: 2px 2px #2eaebb;
   color: #444f68;
-  margin:10px;
-  width: 120px;
+  height: 40px;
+  margin: 25px 5px 25px 5px;
+  width: 80px;
+}
+
+button.location {
+  background-color: #DCE6EC;
+  border-radius: 40px;
+  box-shadow: 2px 2px #2eaebb;
+  color: #444f68;
+  height: 40px;
+  margin: 40px 10px 25px 10px;
+  width: 200px;
 }
 
 section {
@@ -58,4 +65,36 @@ input {
   width: 200px;
   border-style: none;
   padding-left: 6px;
+}
+
+button.locationButton {
+  background-color: #DCE6EC;
+  border-radius: 40px;
+  box-shadow: 2px 2px #2eaebb;
+  color: #444f68;
+  height: 40px;
+  margin: 25px 10px 25px 10px;
+  width: 125px;
+}
+
+ button.magnifyButton{
+   border-top-left-radius: 40px;
+   border-bottom-left-radius: 40px;
+   border-top-right-radius: 0px;
+   border-bottom-right-radius: 0px;
+   margin:25px 0px 25px 0px;
+   height: 42px; 
+   width: 50px;
+ }
+
+input.searchLocation {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  height: 40px;
+  box-shadow: 2px 2px #2eaebb;
+}
+
+button.changeGames {
+  margin: 40px 10px 25px 0px;
+  width: 90px;
 }
