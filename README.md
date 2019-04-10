@@ -1,5 +1,6 @@
 # Board, not bored!
-Created By:
+### Created By:
+
 Colby Allen https://github.com/colbyallen012 
 
 Erik Konner https://github.com/ehk9000 
