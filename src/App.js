@@ -107,6 +107,7 @@ class App extends Component {
 
     }
   }
+
   filterFilteredCards(value, property) {
     let counter = 0;
     let filterGames = this.state.filteredGames.filter(game =>{
@@ -118,7 +119,6 @@ class App extends Component {
       this.setState({
         filteredGames: filterGames
       });
-
     }
   }
 
@@ -141,11 +141,10 @@ class App extends Component {
     });
     if(this.filteredGames !== undefined){
     this.filterFilteredCards("weight",this.state.weight)
-  }else{
-    this.filterAllCards("weight", this.state.weight)
+    } else{
+      this.filterAllCards("weight", this.state.weight)
+    }
   }
-}
-
 
   gameTypeFilter(e){
     console.log("4:", this.filteredGames);
@@ -155,10 +154,10 @@ class App extends Component {
     });
      if(this.filteredGames !== undefined){
     this.filterFilteredCards("gameType",this.state.gameType)
-  }else{
+    } else{
     this.filterAllCards("gameType",this.state.gameType)
+    }
   }
-}
 
 
   foodFilter() {
