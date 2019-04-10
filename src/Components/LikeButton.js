@@ -19,7 +19,6 @@ class LikeButton extends Component {
         <img onClick={this.handleClick}
         src={this.props.isFavorite ? this.props.like : this.props.unlike}
         className="like-btn"></img>
-
       </div>
     );
   }

@@ -26,7 +26,7 @@ class NavBar extends Component {
           <li ><button className='locationButton' onClick={() => this.props.drinkFilter()}>Has Drinks</button></li>
           <li ><button className='locationButton' onClick={() => this.props.sellerFilter()}>Sells Games</button></li>
           <li ><button className='locationButton' onClick={() => this.props.bringGameFilter()}>Bring Your Own Game</button></li>
-          <li><button className='locationButton'>Favorites</button></li>
+          <li><button className='locationButton' onClick={() => this.props.filterFavorites()}>Favorites</button></li>
         </ul>
         <section>
           <button className='magnifyButton' onClick={this.props.searchByText}><img src={search}/></button>

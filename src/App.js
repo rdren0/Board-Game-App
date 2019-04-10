@@ -15,7 +15,8 @@ class App extends Component {
       gameType: null,
       filteredGames: [],
       filteredLocations: [],
-      searchInput: ''
+      searchInput: '',
+      favorites : []
     }
 
     this.playerFilter = this.playerFilter.bind(this);
@@ -28,7 +29,10 @@ class App extends Component {
     this.filterFilteredCards = this.filterFilteredCards.bind(this);
     this.filterAllCards = this.filterAllCards.bind(this);
     this.searchByText = this.searchByText.bind(this);
-    this.searchLowerCase = this.searchLowerCase.bind(this)
+    this.searchLowerCase = this.searchLowerCase.bind(this);
+    this.saveToStorage = this.saveToStorage.bind(this);
+    this.toggleFav = this.toggleFav.bind(this);
+    this.filterFavorites = this.filterFavorites.bind(this);
 
   }
 
@@ -50,14 +54,25 @@ class App extends Component {
       .catch(err => {
         throw new Error(err);
       })
-  }
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      this.setState({
+        favorites: favorites
+      });
+    }
 
-  shuffle() {
-    let shuffledGames = this.state.games.sort(() => 0.5 - Math.random());
-    let splicedGames = shuffledGames.splice(0, 8);
+
+  toggleFav(name) {
+    let newState;
+    if (this.state.favorites.includes(name))  {
+     newState = this.state.favorites.filter(fav => fav !== name)
+    } else {
+      newState = [...this.state.favorites, name]
+    }
     this.setState({
-      filteredGames: splicedGames
-    });
+      favorites : newState
+    }, () => {
+    this.saveToStorage()
+    })
   }
 
   searchByText(e) {
@@ -67,6 +82,10 @@ class App extends Component {
     this.setState({
       filteredLocations: locationByText
     })
+  }
+
+  saveToStorage() {
+    localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
   }
 
   searchLowerCase(e) {
@@ -156,10 +175,10 @@ class App extends Component {
     });
   if(this.filteredGames !== undefined){
     this.filterFilteredCardsPlayers(playerInput)
-  }else{
+  } else{
     this.filterAllCardsPlayers(playerInput)
+    }
   }
-}
 
   weightFilter(e){
     let weightInput = e.target.value.toLowerCase();
@@ -217,6 +236,22 @@ class App extends Component {
     });
   }
 
+  filterFavorites() {
+    let filteredLocations = [];
+    let newLocation;
+      this.state.favorites.forEach(fav => {
+        newLocation = this.state.locations.find(location => {
+          return location.name === fav
+      })
+      filteredLocations.push(newLocation)
+      console.log("filteredLocations", filteredLocations);
+     })
+     this.setState({
+       filteredLocations : filteredLocations
+     })
+  }
+
+
   render() {
     let cardArea = this.state.games.length ?
       <CardArea
@@ -229,8 +264,10 @@ class App extends Component {
         drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
         bringGameFilter={ this.bringGameFilter}
-        favorites= { this.state.favorites}
-        searchByText={this.searchByText}/>
+        favorites= {this.state.favorites}
+        searchByText={this.searchByText}
+        toggleFav={this.toggleFav}
+        filterFavorites={this.filterFavorites} />
       : 'Loading...';
 
     return (
