@@ -98,7 +98,7 @@ class App extends Component {
     }
   }
 
-  filterAllCardsPlayers(property) {
+  filterAllCardsByPlayers(property) {
     let filterGames = this.state.games.filter(game => {
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
@@ -135,16 +135,6 @@ class App extends Component {
       });
     }
   }
-  ffilterFilteredCardsPlayers(property) {
-    let filterGames = this.state.filteredGames.filter(game =>{
-      return game.minPlayers <= property && game.maxPlayers >= property;
-    });
-    if(filterGames.length === 0){
-      this.setState({filteredGames: null})
-    }else{
-      this.setState({
-        filteredGames: filterGames
-      });
 
   filterFilteredCardsByType(value, property) {
     let filterGames = this.state.filteredGames.filter(game => {
@@ -164,12 +154,8 @@ class App extends Component {
     this.setState({
       players: playerInput
     });
-    if (this.filteredGames !== undefined) {
-      this.filterFilteredCardsPlayers(playerInput);
-    } else {
-      this.filterAllCardsPlayers(playerInput);
-    }
-  }
+    this.filterAllCardsByPlayers(playerInput)
+}
 
   weightFilter(e){
     let weightInput = e.target.value.toLowerCase();
