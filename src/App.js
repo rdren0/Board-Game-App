@@ -98,7 +98,7 @@ class App extends Component {
     }
   }
 
-  filterAllCardsPlayers(property) {
+  filterAllCardsByPlayers(property) {
     let filterGames = this.state.games.filter(game => {
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
@@ -154,9 +154,8 @@ class App extends Component {
     this.setState({
       players: playerInput
     });
-    this.filterAllCardsByPlayer(playerInput)
-
-  }
+    this.filterAllCardsByPlayers(playerInput)
+}
 
   weightFilter(e){
     let weightInput = e.target.value.toLowerCase();
