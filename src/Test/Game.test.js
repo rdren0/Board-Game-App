@@ -7,8 +7,6 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-
-
 const mock = [
 {name: "7 Wonders",
   minPlayers: 2,
