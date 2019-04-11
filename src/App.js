@@ -75,7 +75,7 @@ class App extends Component {
   }
 
   searchByText(e) {
-    let search = e.target.value;
+    let search = e.target.value.toLowerCase();
     console.log(search);
     let locationByText = this.state.locations.filter(location => {
       return location.name.toLowerCase().includes(search)
