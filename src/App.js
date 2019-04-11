@@ -77,7 +77,7 @@ class App extends Component {
     let search = e.target.value.toLowerCase();
     console.log(search);
     let locationByText = this.state.locations.filter(location => {
-      return location.name.includes(search)
+      return location.name.toLowerCase().includes(search)
     })
     this.setState({
       filteredLocations: locationByText
@@ -246,7 +246,7 @@ class App extends Component {
 
 
   render() {
-    let cardArea = this.state.games.length ? 
+    let cardArea = this.state.games.length ?
       <CardArea
         gamesData={this.state.filteredGames}
         locationData={this.state.filteredLocations}
