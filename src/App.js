@@ -246,7 +246,7 @@ class App extends Component {
 
 
   render() {
-    let cardArea = this.state.games.length ?
+    let cardArea = this.state.games.length ? 
       <CardArea
         gamesData={this.state.filteredGames}
         locationData={this.state.filteredLocations}
