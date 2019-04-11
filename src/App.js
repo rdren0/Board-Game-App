@@ -75,7 +75,6 @@ class App extends Component {
 
   searchByText(e) {
     let search = e.target.value.toLowerCase();
-    console.log(search);
     let locationByText = this.state.locations.filter(location => {
       return location.name.toLowerCase().includes(search)
     })
@@ -89,7 +88,6 @@ class App extends Component {
   }
 
   filterAllCards(value, property) {
-    let counter = 0;
     let filterGames = this.state.games.filter(game =>{
       return game[value] === property;
     });
@@ -100,8 +98,7 @@ class App extends Component {
 
   }
 
-  filterAllCardsPlayers(property) {
-    let counter = 0;
+  filterAllCardsByPlayer(property) {
     let filterGames = this.state.games.filter(game =>{
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
@@ -117,8 +114,6 @@ class App extends Component {
 
 
   filterAllCardsByType(value, property) {
-    console.log('filterAllCardsByType - Mark')
-    let counter = 0;
     let filterGames = this.state.games.filter(game =>{
       return game[value].includes(property);
     });
@@ -130,7 +125,6 @@ class App extends Component {
   }
 
   filterFilteredCards(value, property) {
-    let counter = 0;
     let filterGames = this.state.filteredGames.filter(game =>{
       return game[value] === property;
     })
@@ -142,13 +136,22 @@ class App extends Component {
       });
     }
   }
+  ffilterFilteredCardsPlayers(property) {
+    let filterGames = this.state.filteredGames.filter(game =>{
+      return game.minPlayers <= property && game.maxPlayers >= property;
+    });
+    if(filterGames.length === 0){
+      this.setState({filteredGames: null})
+    }else{
+      this.setState({
+        filteredGames: filterGames
+      });
+
+    }
+  }
 
   filterFilteredCardsByType(value, property) {
-    console.log("FFCBT value",value)
-        console.log("FFCBT property", property)
-
     let filterGames = this.state.filteredGames.filter(game =>{
-      console.log("testing" ,game[value])
       return game[value].includes(property);
     })
     if(filterGames.length === 0){
@@ -168,7 +171,7 @@ class App extends Component {
   if(this.filteredGames !== undefined){
     this.filterFilteredCardsPlayers(playerInput)
   } else{
-    this.filterAllCardsPlayers(playerInput)
+    this.filterAllCardsByPlayer(playerInput)
     }
   }
 
@@ -189,7 +192,6 @@ class App extends Component {
     this.setState({
       gameType: gameTypeInput
     });
-    console.log('Mahks piece of state', this.state.gameType)
     if (this.state.filteredGames.length > 0) {
       this.filterAllCardsByType("type",gameTypeInput)
     } else {
@@ -199,7 +201,7 @@ class App extends Component {
 
   foodFilter() {
     let filteredLocations = this.state.locations.filter(location => location.hasFood === true);
-    console.log(filteredLocations);
+  
     this.setState({
       filteredLocations: filteredLocations
     });
@@ -207,7 +209,6 @@ class App extends Component {
 
   drinkFilter() {
     let filteredLocations = this.state.locations.filter(location => location.hasDrinks === true);
-    console.log(filteredLocations);
     this.setState({
       filteredLocations: filteredLocations
     });
@@ -215,7 +216,6 @@ class App extends Component {
 
   sellerFilter() {
     let filteredLocations = this.state.locations.filter(location => location.sellsGames === true);
-    console.log(filteredLocations);
     this.setState({
       filteredLocations: filteredLocations
     });
@@ -223,7 +223,6 @@ class App extends Component {
 
   bringGameFilter() {
     let filteredLocations = this.state.locations.filter(location => location.bringYourOwnGame === true);
-    console.log(filteredLocations);
     this.setState({
       filteredLocations: filteredLocations
     });

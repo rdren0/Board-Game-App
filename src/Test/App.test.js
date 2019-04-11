@@ -117,4 +117,28 @@ it('should have the proper defualt state', () => {
     expect(wrapper.state('filteredLocations')).toEqual(mockData);
   });
 
+    it('should filter games by group number', () => {
+    wrapper.state().games = mockGameData
+    const instance = wrapper.instance()
+    expect(wrapper.state('filteredGames')).toEqual([]);
+    instance.filterAllCardsByPlayer(4);
+    expect(wrapper.state('filteredGames')).toEqual(mockGameData);
+  });
+
+    it('should filter games by Type', () => {
+    wrapper.state().games = mockGameData
+    const instance = wrapper.instance()
+    expect(wrapper.state('filteredGames')).toEqual([]);
+    instance.filterAllCardsByType("type", "action");
+    expect(wrapper.state('filteredGames')).toEqual([]);
+  });
+
+    it('should filter games by Weight', () => {
+    wrapper.state().games = mockGameData
+    const instance = wrapper.instance()
+    expect(wrapper.state('filteredGames')).toEqual([]);
+    instance.filterAllCards("weight", "medium");
+    expect(wrapper.state('filteredGames')).toEqual(mockGameData);
+  });
+
 });

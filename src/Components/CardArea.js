@@ -29,7 +29,6 @@ class CardArea extends Component {
   }
 
   render() {
-    console.log('this.props.gamesData', this.props.gamesData)
     if(this.state.view === "Games"){
        let gamesCards =
       this.props.gamesData.map((game) => {
