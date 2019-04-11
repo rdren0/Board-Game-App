@@ -3,7 +3,11 @@
 exports[`CardArea should match the snapshot with all data passed in correctly 1`] = `
 <div>
   <NavBar
+    bringGameFilter={[MockFunction]}
     changeCards={[Function]}
+    drinkFilter={[MockFunction]}
+    foodFilter={[MockFunction]}
+    gameTypeFilter={[MockFunction]}
     games={
       Array [
         Object {
@@ -53,7 +57,24 @@ exports[`CardArea should match the snapshot with all data passed in correctly 1`
         },
       ]
     }
+    playerFilter={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            1,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    sellerFilter={[MockFunction]}
     status="Games"
+    weightFilter={[MockFunction]}
   />
   <section
     className="cardContainer"
