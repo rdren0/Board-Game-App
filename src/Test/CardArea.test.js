@@ -25,7 +25,7 @@ describe('CardArea', () => {
   beforeEach(() =>{
     wrapper = shallow(
       <CardArea
-gamesData={mockData}
+        gamesData={mockData}
         favorites= {favorites}
         />
     )
