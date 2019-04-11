@@ -65,7 +65,9 @@ exports[`NavBar should match the snapshot with all data passed in correctly 1`] 
         </button>
       </li>
     </ul>
-    <select>
+    <select
+      onChange={[MockFunction]}
+    >
       <option>
         Difficulty
       </option>
@@ -79,7 +81,9 @@ exports[`NavBar should match the snapshot with all data passed in correctly 1`] 
         Heavy
       </option>
     </select>
-    <select>
+    <select
+      onChange={[MockFunction]}
+    >
       <option>
         Type
       </option>
@@ -105,6 +109,7 @@ exports[`NavBar should match the snapshot with all data passed in correctly 1`] 
     <button
       className="location toggle-button"
       id="location"
+      onClick={[MockFunction]}
     >
       Locations
     </button>

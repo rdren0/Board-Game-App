@@ -88,7 +88,6 @@ class CardArea extends Component {
         gamesOffered = {location.gamesOffered}
         isFavorite={liked}
         toggleFav={this.props.toggleFav}
-
         />
       });
         return (
