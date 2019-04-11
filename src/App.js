@@ -62,75 +62,74 @@ class App extends Component {
   toggleFav(name) {
     let newState;
     if (this.state.favorites.includes(name)) {
-      newState = this.state.favorites.filter(fav => fav !== name)
+      newState = this.state.favorites.filter(fav => fav !== name);
     } else {
-      newState = [...this.state.favorites, name]
+      newState = [...this.state.favorites, name];
     }
     this.setState({
       favorites : newState
     }, () => {
-    this.saveToStorage()
-    })
+      this.saveToStorage();
+    });
   }
 
   searchByText(e) {
     let search = e.target.value.toLowerCase();
     let locationByText = this.state.locations.filter(location => {
-      return location.name.toLowerCase().includes(search)
-    })
+      return location.name.toLowerCase().includes(search);
+    });
     this.setState({
       filteredLocations: locationByText
-    })
+    });
   }
 
   saveToStorage() {
-    localStorage.setItem('favorites', JSON.stringify(this.state.favorites))
+    localStorage.setItem('favorites', JSON.stringify(this.state.favorites));
   }
 
   filterAllCards(value, property) {
-    let filterGames = this.state.games.filter(game =>{
+    let filterGames = this.state.games.filter(game => {
       return game[value] === property;
     });
-    if(filterGames.length > 0){
+    if (filterGames.length > 0) {
       this.setState({
         filteredGames: filterGames
-      });    }
-
+      });    
+    }
   }
 
-  filterAllCardsByPlayer(property) {
-    let filterGames = this.state.games.filter(game =>{
+  filterAllCardsByPlayers(property) {
+    let filterGames = this.state.games.filter(game => {
       return game.minPlayers <= property && game.maxPlayers >= property;
     });
-    if(filterGames.length === 0){
-      this.setState({filteredGames: null})
-    }else{
+    if (filterGames.length === 0) {
+      this.setState({ filteredGames: null })
+    } else {
       this.setState({
         filteredGames: filterGames
       });
-
     }
   }
 
 
   filterAllCardsByType(value, property) {
-    let filterGames = this.state.games.filter(game =>{
+    let filterGames = this.state.games.filter(game => {
       return game[value].includes(property);
     });
-    if(filterGames.length > 0){
+    if (filterGames.length > 0) {
       this.setState({
         filteredGames: filterGames
-        });    
+      });    
     }
   }
 
   filterFilteredCards(value, property) {
-    let filterGames = this.state.filteredGames.filter(game =>{
+    let filterGames = this.state.filteredGames.filter(game => {
       return game[value] === property;
-    })
-    if(filterGames.length === 0){
-      this.setState({filteredGames: null})
-    }else{
+    });
+    if (filterGames.length === 0) {
+      this.setState({ filteredGames: null })
+    } else {
       this.setState({
         filteredGames: filterGames
       });
@@ -138,12 +137,12 @@ class App extends Component {
   }
 
   filterFilteredCardsByType(value, property) {
-    let filterGames = this.state.filteredGames.filter(game =>{
+    let filterGames = this.state.filteredGames.filter(game => {
       return game[value].includes(property);
     })
-    if(filterGames.length === 0){
-      this.setState({filteredGames: null})
-    }else{
+    if (filterGames.length === 0) {
+      this.setState({filteredGames: null});
+    } else {
       this.setState({
         filteredGames: filterGames
       });
@@ -155,22 +154,22 @@ class App extends Component {
     this.setState({
       players: playerInput
     });
-    this.filterAllCardsByPlayer(playerInput)
-  }
+    this.filterAllCardsByPlayers(playerInput)
+}
 
   weightFilter(e){
     let weightInput = e.target.value.toLowerCase();
     this.setState({
       weight: weightInput
     });
-    if(this.filteredGames !== undefined){
-    this.filterFilteredCards("weight",weightInput)
-    } else{
-      this.filterAllCards("weight", weightInput)
+    if(this.filteredGames !== undefined) {
+      this.filterFilteredCards("weight",weightInput);
+    } else {
+      this.filterAllCards("weight", weightInput);
     }
   }
 
-  gameTypeFilter(e){
+  gameTypeFilter(e) {
     let gameTypeInput = e.target.value.toLowerCase();
     this.setState({
       gameType: gameTypeInput
@@ -184,7 +183,6 @@ class App extends Component {
 
   foodFilter() {
     let filteredLocations = this.state.locations.filter(location => location.hasFood === true);
-  
     this.setState({
       filteredLocations: filteredLocations
     });
@@ -214,35 +212,35 @@ class App extends Component {
   filterFavorites() {
     let filteredLocations = [];
     let newLocation;
-      this.state.favorites.forEach(fav => {
-        newLocation = this.state.locations.find(location => {
-          return location.name === fav
-      })
-      filteredLocations.push(newLocation)
-      console.log("filteredLocations", filteredLocations);
-     })
-     this.setState({
-       filteredLocations : filteredLocations
-     })
+    this.state.favorites.forEach(fav => {
+      newLocation = this.state.locations.find(location => {
+        return location.name === fav
+      });
+      filteredLocations.push(newLocation);
+    })
+    this.setState({
+      filteredLocations : filteredLocations
+    });
   }
 
 
   render() {
     let cardArea = this.state.games.length ?
       <CardArea
-        gamesData={this.state.filteredGames}
-        locationData={this.state.filteredLocations}
-        playerFilter={this.playerFilter}
-        weightFilter={this.weightFilter}
-        gameTypeFilter={this.gameTypeFilter}
+        gamesData={ this.state.filteredGames }
+        locationData={ this.state.filteredLocations }
+        playerFilter={ this.playerFilter }
+        weightFilter={ this.weightFilter }
+        gameTypeFilter={ this.gameTypeFilter }
         foodFilter={ this.foodFilter }
         drinkFilter={ this.drinkFilter }
         sellerFilter={ this.sellerFilter }
-        bringGameFilter={ this.bringGameFilter}
-        favorites= {this.state.favorites}
-        searchByText={this.searchByText}
-        toggleFav={this.toggleFav}
-        filterFavorites={this.filterFavorites} />
+        bringGameFilter={ this.bringGameFilter }
+        favorites={ this.state.favorites }
+        searchByText={ this.searchByText }
+        toggleFav={ this.toggleFav }
+        filterFavorites={ this.filterFavorites } 
+        />
       : 'Loading...';
 
     return (

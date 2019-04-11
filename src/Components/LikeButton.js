@@ -14,10 +14,10 @@ class LikeButton extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         <img onClick={this.handleClick}
-        src={this.props.isFavorite ? this.props.like : this.props.unlike}
+        src={ this.props.isFavorite ? this.props.like : this.props.unlike }
         className="like-btn"></img>
       </div>
     );
