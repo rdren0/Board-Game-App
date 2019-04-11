@@ -32,7 +32,6 @@ class App extends Component {
     this.saveToStorage = this.saveToStorage.bind(this);
     this.toggleFav = this.toggleFav.bind(this);
     this.filterFavorites = this.filterFavorites.bind(this);
-
   }
 
   componentDidMount() {
@@ -62,8 +61,8 @@ class App extends Component {
 
   toggleFav(name) {
     let newState;
-    if (this.state.favorites.includes(name))  {
-     newState = this.state.favorites.filter(fav => fav !== name)
+    if (this.state.favorites.includes(name)) {
+      newState = this.state.favorites.filter(fav => fav !== name)
     } else {
       newState = [...this.state.favorites, name]
     }
@@ -78,7 +77,7 @@ class App extends Component {
     let search = e.target.value.toLowerCase();
     console.log(search);
     let locationByText = this.state.locations.filter(location => {
-      return location.name.includes(search)
+      return location.name.toLowerCase().includes(search)
     })
     this.setState({
       filteredLocations: locationByText
@@ -118,6 +117,7 @@ class App extends Component {
 
 
   filterAllCardsByType(value, property) {
+    console.log('filterAllCardsByType - Mark')
     let counter = 0;
     let filterGames = this.state.games.filter(game =>{
       return game[value].includes(property);
@@ -125,8 +125,8 @@ class App extends Component {
     if(filterGames.length > 0){
       this.setState({
         filteredGames: filterGames
-      });    }
-
+        });    
+    }
   }
 
   filterFilteredCards(value, property) {
@@ -185,14 +185,15 @@ class App extends Component {
   }
 
   gameTypeFilter(e){
-    let gameTypeInput = e.target.value;
+    let gameTypeInput = e.target.value.toLowerCase();
     this.setState({
       gameType: gameTypeInput
     });
-     if(this.state.filteredGames === undefined){
-    this.filterAllCardsByType("type",gameTypeInput)
-    } else{
-    this.filterFilteredCardsByType("type", gameTypeInput)
+    console.log('Mahks piece of state', this.state.gameType)
+    if (this.state.filteredGames.length > 0) {
+      this.filterAllCardsByType("type",gameTypeInput)
+    } else {
+      this.filterFilteredCardsByType("type", gameTypeInput)
     }
   }
 
@@ -245,7 +246,7 @@ class App extends Component {
 
 
   render() {
-    let cardArea = this.state.games.length ? 
+    let cardArea = this.state.games.length ?
       <CardArea
         gamesData={this.state.filteredGames}
         locationData={this.state.filteredLocations}
