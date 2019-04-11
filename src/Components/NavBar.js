@@ -16,7 +16,6 @@ class NavBar extends Component {
 
 
   render() {
-    console.log(this.props.status)
     if(this.props.status === "Locations"){
       return (
         <div>
